@@ -1,5 +1,7 @@
 # The Deterministic Scaffold — companion repository
 
+> *“This is what agentic AI looks like when it grows up and gets a job — accountable to earn trust, auditable to prove it, willing to say no to keep it.”*
+
 This is the companion repo for [*The deterministic scaffold: a case study in
 compounding architecture*](paper.pdf) — a paper tracing one architectural
 invariant (an LLM proposes; a deterministic gate decides) across ten
