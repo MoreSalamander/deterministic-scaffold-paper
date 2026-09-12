@@ -4,8 +4,8 @@
 
 This is the companion repo for [*The deterministic scaffold: a case study in
 compounding architecture*](paper.pdf) — a paper tracing one architectural
-invariant (an LLM proposes; a deterministic gate decides) across ten
-checkpoints of a real, shipped body of work.
+invariant (an LLM proposes; a deterministic gate decides) across fifteen
+checkpoints of a real, shipped body of work (January to September 2026; revised 2026-09-12).
 
 **This repo is not the production code.** It contains small, dependency-free
 reproductions of two specific claims from the paper, built so a skeptical

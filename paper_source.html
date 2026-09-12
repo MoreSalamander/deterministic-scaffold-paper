@@ -52,24 +52,32 @@
 
   <p class="kicker">Working paper &middot; MoreSalamander StudioLabs</p>
   <h1 class="title">The deterministic scaffold: a case study in compounding architecture</h1>
-  <p class="subtitle">How one invariant &mdash; the model proposes, a deterministic gate decides &mdash; generalized across ten checkpoints without ever being rewritten, and became the substrate its own catalog now runs on.</p>
-  <p class="meta">Author &mdash; 0ne29 &nbsp;&middot;&nbsp; Compiled by &mdash; Claude (Sonnet 5) &nbsp;&middot;&nbsp; Period covered &mdash; 2026-01 to 2026-07-28</p>
+  <p class="subtitle">How one invariant &mdash; the model proposes, a deterministic gate decides &mdash; generalized across fifteen checkpoints without ever being rewritten, and became the substrate its own catalog now runs on.</p>
+  <p class="meta">Author &mdash; 0ne29 &nbsp;&middot;&nbsp; Compiled by &mdash; Claude (Sonnet 5; this revision, Fable 5.1) &nbsp;&middot;&nbsp; Period covered &mdash; 2026-01 to 2026-09-12</p>
 
   <div class="abstract">
-    <p>This paper traces one architectural idea across ten checkpoints of real, shipped work: the
+    <p>This paper traces one architectural idea across fifteen checkpoints of real, shipped work: the
     claim that reliability in an LLM system should live in a deterministic verification boundary,
     never in the model's judgment. The evidence for this claim is not that it sounds coherent
     &mdash; it is that the same invariant was re-implemented independently, under increasing stakes
     and across domains that share no code: a personal learning system, a story generator, a
     real-time heist simulation, a hosted teach-yourself-to-code reader, a 30-project physics
     curriculum, an autonomous-org framework, a crypto-opportunity hunter, a meta-org of hunters,
-    a scoped Manager-engine extension, and &mdash; new in this revision &mdash; the session in which
+    a scoped Manager-engine extension, and &mdash; new in the previous revision &mdash; the session in which
     that autonomous-org framework stopped being nine separate instances of the pattern and became
     the single substrate all of them now sit on, under one name: Entropy AI. What follows is a
     synthesis of that record, compiled from persisted session memory and live repository state
     rather than raw transcript, with dates, test counts, and live-run costs cited wherever they
     were recorded &mdash; and with the places the pattern does not uniformly hold, or is not yet
     built, named plainly rather than smoothed over.</p>
+    <p><em>New in this revision (2026-09-12):</em> five further checkpoints, July 27 to
+    September 12 &mdash; the substrate shipping as a front door and a hackathon demo, four engines
+    built on one and then composed through a single recursive contract, five partner-locked
+    production systems built to a hackathon's rules and hosted, a moonshot named and parked the
+    same morning, and a live, public, self-improving poker league with an audience watching the
+    gate work in real time. The invariant did not change. What changed is the blast radius each
+    checkpoint trusted it with, and &mdash; once in this revision &mdash; the direction of the
+    frontier-versus-local economics &sect;07 first recorded.</p>
   </div>
 
   <div class="strip">
@@ -83,6 +91,11 @@
     <div class="cp"><b>VIII</b>trust tiers<br>scoped</div>
     <div class="cp"><b>IX</b>Education Agency<br>scoped, 07/25&ndash;26</div>
     <div class="cp"><b>X</b>Entropy AI, assembled<br>07/27&ndash;28</div>
+    <div class="cp"><b>XI</b>Entropy OS, the front door<br>08/06&ndash;10</div>
+    <div class="cp"><b>XII</b>four engines &rarr; one-engine<br>08/07&ndash;08</div>
+    <div class="cp"><b>XIII</b>Genesis OS<br>08/12&ndash;26</div>
+    <div class="cp"><b>XIV</b>Tutela<br>named, 08/28</div>
+    <div class="cp"><b>XV</b>Agent Poker League<br>08/31&rarr;</div>
   </div>
 
   <h2><span class="num">00</span>A methodological note</h2>
@@ -99,7 +112,7 @@
     session. This revision's own source (<code>paper_source.html</code>) is committed to this
     repository for exactly that reason: a paper arguing that verification requires a durable,
     checkable record should not itself depend on a session's temp directory surviving. See
-    &sect;12, "the paper's own source did not survive its own standard," for the fuller note.
+    &sect;19, "the paper's own source did not survive its own standard," for the fuller note.
   </div>
 
   <h2><span class="num">01</span>The claim</h2>
@@ -233,7 +246,7 @@
 
   <h2><span class="num">10</span>Checkpoint IX &mdash; Education Agency</h2>
   <p class="cite">scoped, 2026-07-25 to 07-26</p>
-  <p>The Manager-archetype candidate this paper's own closing suggestions (&sect;13) recommended
+  <p>The Manager-archetype candidate this paper's own closing suggestions (&sect;18) recommended
   building first &mdash; the only one built from pieces that already exist, ship, and are tested. As of
   this revision it remains scoped, not built; that gap is named here rather than implied closed.</p>
 
@@ -275,7 +288,7 @@
   <h3>Second-brain deepening, and a caught bug worth keeping in the record</h3>
   <p>Three additions to Veritas's own institutional memory (<code>engine/memory.py</code>'s
   <code>MemoryStore</code> &mdash; already, independently, the same shape as myAIstro's SOT, not an
-  import of it; see &sect;12's convergence note): a grounding check
+  import of it; see &sect;17's convergence note): a grounding check
   (<code>engine/grounding.py</code>) verifying a memory record's body actually stays anchored to
   what its own <code>informed_by</code> provenance claims informed it; an Obsidian vault export
   (<code>engine/memory_export.py</code>) making the memory graphable; and a recall-preview endpoint
@@ -300,7 +313,209 @@
     includes what it has reasoned through but not yet built, named as such.
   </div>
 
-  <h2><span class="num">12</span>The wider catalog &mdash; where the pattern holds, and where it honestly doesn't</h2>
+  <h2><span class="num">12</span>Checkpoint XI &mdash; the substrate gets a front door</h2>
+  <p class="cite">entropy-os &middot; 2026-08-06 to 2026-08-10 &middot; 133 commits (<code>fcfdc16</code> &rarr; <code>3fcbd01</code>) &middot; plus entropy-datahub-demo (18) and hackathon-hunter (8)</p>
+  <p>Checkpoint X named the substrate. This checkpoint gave it a face without letting the face
+  re-implement anything. Entropy OS is the front door &mdash; "what do you want to build," Mission
+  Control, the layer descent &mdash; while every engine stays in Veritas, imported as a library. The
+  relationship is the my-AI-script pattern applied one level up: the front door knows only the
+  <em>shape</em> each engine requires, and it imports the engine's own validators so that drift breaks
+  loudly at parse time rather than quietly at runtime. The same five days produced the studio's
+  judge-facing entry for the DataHub hackathon &mdash; one page, one press, then a descent from Entropy OS
+  through Opportunity and the Hunter engines to the artifact floor, where real org runs sit with their
+  DataHub assertion verdicts attached &mdash; and a fourth Hunter, born inside that hackathon window,
+  whose one fail-closed gate is the &sect;07 law restated for a new domain: a listing must resolve to the
+  real platform, never a lookalike prize portal.</p>
+  <div class="callout">
+    <b class="tag">what this checkpoint adds</b>
+    Nothing new about the gate. Something new about ownership: a consumer of engines that cannot
+    become a second implementation of them, because it holds no logic of its own and fails at the
+    boundary if the shape moves. The "vending machine of disposable AI engineering" stopped being a
+    product identity in prose and became the thing the front door dispenses.
+  </div>
+
+  <h2><span class="num">13</span>Checkpoint XII &mdash; engine on engine, then one contract</h2>
+  <p class="cite">research-engine &rarr; design / code / learn &middot; 2026-08-07 &middot; one-engine &middot; 2026-08-08 &middot; 24 commits (<code>60f6f00</code> &rarr; <code>019040e</code>)</p>
+  <p>On August 7 a research engine &mdash; plan an investigation, fan agents out across live sources,
+  promote verified evidence into a persistent knowledge graph &mdash; became a substrate the same day it
+  shipped: three more engines (websites, software, curricula) were built <em>on</em> it, installed
+  editable, not copied. On August 8 the four converged into one engine through a single contract of
+  nine routes, and the unified engine exposes that same contract, so a second-level system holding one
+  composite cannot tell it from a leaf. Composition is recursive by construction, not by special case
+  &mdash; &sect;08's "engine of engines" with the recursion made mechanical.</p>
+  <p>The thesis instance worth the record came from the first real composed run, and it is the &sect;07
+  class of evidence: the software engine honestly reported a failing test suite, and the pipeline
+  generated a public website for that software anyway. Nobody had <em>decided</em> whether that was
+  acceptable, because federation had given the system memory and durability but not judgment. The fix
+  (<code>09563db</code>, "bring the deterministic decision layer into the composition") is a
+  composition gate: a pure function from a stage's contract result to a verdict that declares how it
+  judged &mdash; <code>HARD</code> (a recorded fact; blocks), <code>SOFT</code> (an opinion, never dressed
+  up as proof; recorded only), <code>HUMAN</code> (a person decides; hold for a signal). Verification
+  is <code>HUMAN</code> on purpose: whether the suite is red is a hard fact the gate settles; whether to
+  ship anyway is a judgment a person makes. Gates read only the contract, so they add decision without
+  adding coupling, and they run inside the workflow, so the verdict lands in durable history.</p>
+  <div class="callout">
+    <b class="tag">the trust tiers, found again</b>
+    <code>HARD</code> / <code>SOFT</code> / <code>HUMAN</code> is &sect;09's four-tier spectrum collapsed to
+    the three distinctions a composition actually needs, re-derived from a failure rather than
+    imported from this paper. That is the evidence class &sect;18 rates highest: an independent
+    re-derivation landing on a predicted structure.
+  </div>
+
+  <h2><span class="num">14</span>Checkpoint XIII &mdash; built to someone else's rules</h2>
+  <p class="cite">Genesis OS &middot; 2026-08-12 to 2026-08-26 &middot; 01 Parallel 102 commits &middot; 02 Grafana 46 &middot; 03 ClickHouse 25 &middot; 04 IBM 40 &middot; 05 Replit 7 &middot; federation 13 &middot; all repositories public</p>
+  <p>Every earlier checkpoint chose its own constraints. Genesis OS was built to a hackathon's: five
+  standalone systems for a fictional film studio, one per partner track, each required to use a named
+  partner substrate at runtime and Google's models only, plus a federation layer that reads all five
+  through one-way adapters and never lets a sibling call back. The standing rule for the whole build
+  &mdash; recorded on 2026-08-12 as a Studio Head directive &mdash; was that every included component gets
+  built and run for real, never downgraded to "optional" or "staged," and that conflicts with a locked
+  architecture get surfaced, not self-resolved. Each track therefore ran its full production stack
+  (Temporal, NATS, PostgreSQL, DataHub, the observability trio) and was hosted on Cloud Run with its
+  memory in the pod.</p>
+  <p>The invariant shows up in each track as a state computed in code where a chatbot would have
+  asserted one. 01's verification states (VERIFIED / UNVERIFIED / CONFLICTED) keep disagreement on the
+  record, and its coverage audit reads the answer back against its own graph and turns each
+  shortfall into a bounded nested question. 03's statistics are effect sizes against dispersion,
+  scale-free so that 104 million rows cannot buy significance, with VERIFIED additionally requiring the
+  effect to hold across three eras &mdash; and the corpus was seeded with known truths, including one
+  deliberately contested pair, so the states could be checked against what was planted. 04's
+  criterion scores and policy findings are computed; Gemini evaluates qualitative criteria with
+  citations and never emits the aggregate; and the human authorization is a durable Temporal signal
+  that was demonstrated to survive the worker's death mid-pause. 05's delivery is computed from verified
+  checklist coverage plus a live deployment; nothing declares itself done, and the construction bay is
+  forbidden by contract from branching on where an objective came from.</p>
+  <div class="callout warn">
+    <b class="tag">the edge, named</b>
+    Two things this checkpoint does not claim. First, the Replit track's credits ran out mid-build,
+    weeks before the deadline; the Studio Head chose on 2026-08-27 to finish credit-free, on the
+    grounds that the track rule ("built using Replit Agent as part of the development process") was
+    already satisfied by the one session in which the Agent built the entire bay against a contract
+    embedded in the prompt. That is a lock amendment on the record, not a quiet reinterpretation.
+    Second, the record this paper is compiled from ends on that date; whether the entries were
+    submitted to the contest, and how they placed, is not in it, so it is not asserted here. Genesis
+    was parked on 2026-09-12 when the league took the table.
+  </div>
+
+  <h2><span class="num">15</span>Checkpoint XIV &mdash; the thesis, pointed at the models</h2>
+  <p class="cite">Tutela &middot; named 2026-08-28 &middot; README and roadmap only &middot; commitgen (P0): a repository with zero commits</p>
+  <p>One pre-dawn session named a direction and then parked it before noon: <em>frontier models teach,
+  specialized models work, deterministic gates decide.</em> Tutela is the scaffold applied to the
+  models themselves &mdash; a closed loop (capture the studio's own workflow exhaust &rarr; scrub &rarr;
+  expand &rarr; train a small local model &rarr; examine &rarr; route) where every arrow crosses a
+  deterministic gate, promotion is judged only on real held-out data (never synthetic, never
+  LLM-judged), and the runtime router runs student &rarr; gate-fail &rarr; teacher &rarr; deterministic
+  fallback. The name is Roman law: the guardian's office over a ward until it may act on its own.
+  Its first increment, commitgen &mdash; a fine-tuned commit-message model behind a gate that decides
+  whether its output is ever shown &mdash; exists as a README and an initialized repository with no
+  commits. It is included here for the reason &sect;10 included the Education Agency: an honest edge
+  names what was reasoned through and not built. It matters to the record because the next
+  checkpoint's logs are, by design, the corpus this loop would train on.</p>
+
+  <h2><span class="num">16</span>Checkpoint XV &mdash; the scaffold goes on air</h2>
+  <p class="cite">Agent Poker League &middot; 2026-08-31 to 2026-09-12 and running &middot; 99 commits (<code>f5a9bb0</code> &rarr; <code>470d6c8</code>) &middot; 1,291 tests, 0 failing (run live for this revision) &middot; API spend: $0</p>
+  <p>Every checkpoint before this one applied the invariant to a pipeline someone ran. This one applies
+  it to a show: six AI agents play a season of no-limit hold'em, live on YouTube and Twitch, every card
+  face up and every thought on screen, with an audience watching the gate work in real time. The
+  untrusted decision-makers are the stars; the deterministic core is the table; the gate is a poker
+  solver; and the event log that every surface consumes is also the dataset.</p>
+  <div class="flow">
+    <div class="box">six minds<br>propose, among legal actions only</div>
+    <div class="arrow">&rarr;</div>
+    <div class="box">the engine<br>deals, rules, settles &mdash; authoritative</div>
+    <div class="arrow">&rarr;</div>
+    <div class="box">the book<br>a solver's verdict, emitted before the action</div>
+    <div class="arrow">&rarr;</div>
+    <div class="box">one event log<br>booth &middot; overlay &middot; site &middot; school &middot; bench</div>
+  </div>
+  <p>Three rules were written before any model played, and each is enforced by the engine rather than
+  requested of the model. The engine is the only thing that decides what happened; an agent returns one
+  of the legal actions it was handed, and garbage or silence produces the engine's default. Seats are
+  <em>starved, not armored</em>: a seat receives exactly what a human in that chair could see, so other
+  hole cards, other thoughts, the solver's verdicts, and the audience's chat do not exist on the
+  agent's side of the boundary &mdash; prompt injection treated as a reachability problem, with a fuzz
+  test asserting no serialized observation ever contains another seat's cards, and a test named
+  <code>hostile input</code> holding the chat door shut. And the deck is committed before it is dealt:
+  <code>sha256(seed:handId)</code> is published in the hand's opening event, the engine never sees the
+  seed, and the reveal after the hand lets anyone with the log rebuild the deck. That last rule is also
+  the mechanism behind the ghost line, in which a folded winner is rebuilt with a call in place of the
+  fold and the show says what was thrown away.</p>
+
+  <h3>The book &mdash; a solver as the gate</h3>
+  <p>The grader here is not a rubric but a Nash-equilibrium solver (<code>b13ae3e</code>, 2026-09-05):
+  58 preflop tables computed by Monte Carlo counterfactual regret minimization over an abstract game,
+  the one modelling choice (equity-dependent realization at the flop) validated by landing on published
+  opening ranges, tournament tables solved on ICM against the league's own points ladder; postflop, a
+  live CFR+ solve on the actual board and ranges, running concurrently with the agent and stopping
+  when it acts. Every verdict carries its basis, iteration count, and exploitability, and is labeled
+  <code>solved</code>, <code>book</code>, or ranges <code>assumed</code>; the screen never presents a
+  heuristic as a solve. The verdict is emitted <em>before</em> the action, so the audience knows what
+  the book says while the agent is still thinking &mdash; possible only because the orchestrator, not the
+  model, owns the order of events. On the league's own benchmark the solved book loses 0.046 big blinds
+  per decision against its own solve; the hand-written rules engine loses 2.092.</p>
+
+  <h3>Honest minds &mdash; the bug that made a rule</h3>
+  <p>The caught failure of this checkpoint belongs beside &sect;11's vault export and &sect;07's gate laws. A cast
+  report tool built on 2026-09-05 re-grades every logged decision and measures, per character, thought
+  repetition, continuity, fallback rate, and agreement with the solver. Its first run found that the
+  seat configured as the frontier model had been the deterministic fallback for <strong>100% of its
+  decisions</strong> across three sessions &mdash; 799, 293, and 743 decisions &mdash; silently. The root
+  cause was mundane: an environment file that set the API key without exporting it, so the process
+  never inherited it, and a brain that fell back per decision without ever throwing, so the orchestrator
+  never swapped it or captioned the change. The fix was structural rather than local: configuration
+  errors now throw through the decision path so the first-decision swap fires; every fallback thought
+  carries a <code>fallback</code> flag in the protocol and an "on instinct" stamp on screen; and the
+  startup check is loud. The rule that came out of it is the paper's rule in a costume of its own:
+  <em>a rules engine never gets to pass as a character</em>, because the product is watching a mind
+  decide, and a template line airing as a thought would make the whole show a lie.</p>
+  <div class="callout warn">
+    <b class="tag">the frontier economics, reversed</b>
+    &sect;07 recorded the moment local models stopped being enough and frontier spend became worth it.
+    This checkpoint records the opposite move, taken on 2026-09-05 for the plainest reason: the
+    account had no credit. The frontier seat became <em>the solver itself</em>, sampling from the
+    book's own mix, with a local model narrating the decision in character &mdash; never the other way
+    round. Its eval gate went from 17 of 20 to 20 of 20 once two range-narrowing bugs in the solver
+    were found by that same gate. The other four minds run open-weight models on one Mac. The API
+    spend for the entire checkpoint is zero, and that is stated as a fact of the record, not as a
+    principle.
+  </div>
+
+  <h3>The school &mdash; self-modification behind a gate and a human</h3>
+  <p>Between sit-n-gos each character reviews its own play in character and proposes one change to its
+  persona as a patch note with cited hands (<code>e45f598</code>). Nothing is applied. A separate gate
+  replays a fixed set of spots through the character's real brain and requires at least 80% agreement
+  with the book and zero hard fails &mdash; a sub-ten-big-blind raise-fold, folding the big blind at ten to
+  one &mdash; before a note is marked accepted; an accepted note still waits for a human to press approve
+  (<code>2204da2</code>), and the persona file itself is never edited by the loop. As of this revision
+  135 proposals are on file, six were applied, and the two first applied were reverted by the user the
+  same afternoon. Characters also keep notebooks keyed by a spot fingerprint, recalled into the prompt
+  only when a matching spot arises, earned by sitting a 100-question exam on air or a study session
+  over their own worst hands. The measured effect, on the record and not flattering: the first exam
+  with a notebook scored 5 of 20 with the book, and the fix it exposed was in the exam, not the
+  student &mdash; the first twenty spots of a street-ordered pack were all preflop.</p>
+
+  <h3>The show machine, and the failures it was built from</h3>
+  <p>Going live is one press that runs seventeen checks &mdash; ports, OBS, local models, the uplink
+  measured and the encoder sized to it, a broadcast bound, a local relay that fans one encoded stream
+  to two channels, a director that switches scenes off the event feed, the engine, then ingest health
+  and the site's own live flag &mdash; and ending it reverses the sequence and publishes the site. Each
+  check exists because of a night it would have caught. On 2026-09-06 the uplink had fallen to 1.5
+  Mbps and no broadcast was bound to the stream key; YouTube showed nothing while the engine played
+  on. On 2026-09-06 to 07 a stream ran twenty-one hours at roughly 87% frame loss on a 0.6 Mbps
+  uplink. On 2026-09-12 the end-of-show sequence could not complete the broadcast because a refresh
+  token minted while the OAuth app was in testing status had expired after seven days; the broadcast
+  ended by auto-stop, and the token is now checked in preflight. A publish step that reported
+  success without landing the site, because a grep in a pipeline masked the failure, was replaced
+  with three checked steps (<code>c4f7ff8</code>). None of these is a gate on a model. All of them are
+  the same discipline &mdash; verify at the boundary, in code, before trusting the outcome &mdash; applied
+  to the show's own plumbing.</p>
+  <p>By the numbers, as of 2026-09-12 and recomputed from the logs at every publish of the public
+  site: 18,648 hands played, 89,339 agent thoughts, 87,156 solver verdicts, 2.9 million events, 91
+  sessions with every hand replayable at agentpokerleague.com, 1,291 tests. The site is a static
+  snapshot served from the edge; the show machine, the engine, the operator console, and every log
+  stay on the one Mac that runs the table.</p>
+
+  <h2><span class="num">17</span>The wider catalog &mdash; where the pattern holds, and where it honestly doesn't</h2>
   <p>The checkpoints above are not the whole studio; they are the load-bearing ones. Several other
   shipped tools carry the identical shape &mdash; AccessGuard's deterministic axe-core scan with an
   LLM only voicing the branded report, amigurumi-ai's crochet-geometry engine validating every spec
@@ -313,7 +528,7 @@
   all; there may be no LLM in the loop to distrust. Counting them as instances of this specific
   thesis would be the overclaim this paper is trying to avoid elsewhere.</p>
 
-  <h2><span class="num">13</span>What "provable" means in this record</h2>
+  <h2><span class="num">18</span>What "provable" means in this record</h2>
   <p>Every checkpoint above is cited with something falsifiable: a locked regression test born from
   a real bug, a dollar figure from an actual live run, a dissenting verdict left on the record, or
   an independent re-derivation landing on a predicted structure. None of it rests on an assertion
@@ -344,11 +559,11 @@
     that could not survive being asked "grounded in what, exactly?"
   </div>
 
-  <h2><span class="num">14</span>Limitations and open threads</h2>
+  <h2><span class="num">19</span>Limitations and open threads</h2>
   <ul>
     <li>The persistence-layer name is still not uniform across the lineage &mdash; Veritas calls it
     <code>MemoryStore</code>, the Hunter family calls it <code>DataHub</code> &mdash; stated plainly
-    rather than smoothed into false consistency, even after &sect;13's finding that the shape
+    rather than smoothed into false consistency, even after &sect;18's finding that the shape
     underneath both names converged independently.</li>
     <li>The Manager archetype (Career, YouTube, Commerce) remains scoped at the architecture level
     only &mdash; no code exists yet for any of the three, unchanged since the previous revision.</li>
@@ -364,6 +579,19 @@
     <li>SprinklerPro3D's quality-gate is, as of its last recorded state, failing on all five test
     yards &mdash; included deliberately, since a paper arguing for grounded evidence cannot omit its
     own unresolved failures.</li>
+    <li><b>Tutela (&sect;15) is a README, not a system.</b> commitgen's repository has no commits. The
+    direction is on the record; the loop that would train on the league's logs does not exist.</li>
+    <li><b>Genesis OS (&sect;14) is written here as built and hosted, not as submitted or placed.</b> The
+    record this revision is compiled from ends before the contest closed.</li>
+    <li><b>The league's solver declines roughly half of preflop decisions</b> as "line not in tree,"
+    because the cast limps far more than the abstract game allows, and multiway postflop is not solved
+    at all &mdash; those spots fall to the hand-written rules and are labeled so. The prompt's one-line
+    baseline advice to the language-model seats is still that heuristic, not the solver, because
+    switching it changes live play and needs a gate re-run first. The site's test count is a
+    hand-maintained constant, the one figure on its architecture page a publish does not recompute.</li>
+    <li><b>Four broadcast overlays were built and rejected by the user in one day</b> (2026-09-03)
+    before the aesthetic direction held. The thesis says nothing about taste, and the record shows
+    why: the one thing that cannot be gated deterministically took the most iterations.</li>
     <li><b>The paper's own source did not survive its own standard, until now.</b> The previous
     revision existed only as a rendered PDF; its HTML source lived in a session's private temp
     scratchpad and was gone by the time this revision began. That is precisely the kind of
@@ -375,7 +603,7 @@
     the record rather than erasing.</li>
   </ul>
 
-  <h2><span class="num">15</span>On the collaboration itself</h2>
+  <h2><span class="num">20</span>On the collaboration itself</h2>
   <p>This paper is also an artifact of how it was produced. It was written by the user (0ne29) and
   an instance of Claude, working from a shared session, and the division of labor held a consistent
   shape across every checkpoint: the user supplied the vision, the direction, and &mdash; repeatedly
@@ -390,10 +618,19 @@
   imprecision mid-session: an earlier framing suggested Veritas's second brain needed "myAIstro's
   second brain" imported into it; the user pointed out, correctly, that Veritas's own
   <code>MemoryStore</code> already independently is a second brain, tested, and only needed further
-  engineering &mdash; not an integration. &sect;13's DataHub-convergence finding exists because that
+  engineering &mdash; not an integration. &sect;18's DataHub-convergence finding exists because that
   correction was taken seriously enough to go verify, rather than politely agreed with and dropped.</p>
+  <p>This revision adds four more, all from the league. "A punt is not a bad beat" &mdash; the user's
+  refusal to let trash-versus-trash sell as a highlight &mdash; became a beat classifier and a publish
+  bar with the casino jackpot rule (quads or better beaten) as the only automatic pass. "Cash stats
+  mean nothing in sit-n-gos" split every statistic by format the same day. "Make her the solved
+  brain," said with no API credit, produced &sect;16's reversal of &sect;07's economics. And on 2026-09-12 the
+  user pointed out that the studio's own page had not caught up with nine projects and the direction
+  they traced &mdash; a lag the page had claimed as a virtue and, at nine projects, was not. Each of these
+  is the same shape as the corrections above: the user naming what the work meant, and the record
+  changing to match.</p>
 
-  <h2><span class="num">16</span>Closing note</h2>
+  <h2><span class="num">21</span>Closing note</h2>
   <p>Veritas was never the top of this stack &mdash; it is the substrate every level sits on. What
   the previous revision of this paper could only describe in prose &mdash; "the discipline that was
   always the how becomes, here, the what" &mdash; this revision can point to as shipped code: a
@@ -404,13 +641,22 @@
   checkpoint sitting beside the other nine &mdash; it is what checkpoint X's own subject line says
   plainly: assembled. The thesis became the product; this revision is the record of the product
   starting to behave like one.</p>
+  <p>Two revisions on, the product has an audience. The five checkpoints added here trace one movement:
+  the same invariant handed a larger blast radius each time &mdash; a front door that cannot re-implement
+  what it fronts, engines composed through one recursive contract with a decision layer they had to
+  earn from a failure, five systems built to rules the studio did not write, a direction for the
+  models themselves named and set down, and a league in which the model proposes on camera, the
+  engine disposes on camera, and the gate's verdict is on screen before the model has finished
+  thinking. The closing note of the previous revision said the thesis became the product. This
+  one can say something narrower and more checkable: the product now grades itself in public, keeps
+  the log, and has already been caught by its own instruments once.</p>
 
   <footer class="pagebreak"></footer>
-  <h2><span class="num">17</span>Appendix A &mdash; independent evidence</h2>
+  <h2><span class="num">22</span>Appendix A &mdash; independent evidence</h2>
   <p>Exhibits only, no narration. Every commit hash and test count below was read directly from the
   repository or run live during this compilation. Where the underlying record has a real gap, that
-  gap is named rather than filled. A.1&ndash;A.8 are carried over unchanged from the previous
-  revision (re-verified, not re-run, for this update); A.9 is new.</p>
+  gap is named rather than filled. A.1&ndash;A.9 are carried over unchanged from the previous
+  revisions; A.10&ndash;A.13 are new in this revision, read or run live on 2026-09-12.</p>
 
   <div class="appendix-item">
     <h4>A.1 &middot; the two founding failures, verified</h4>
@@ -526,11 +772,77 @@ $ curl -s localhost:8099/api/memory/vault/status
 {"vault_path": "...", "exists": true, "file_count": 221}  # fixed: 221 == 221</pre>
   </div>
 
+  <div class="appendix-item">
+    <h4>A.10 &middot; Checkpoints XI&ndash;XIII &mdash; repositories, first and last commits (read live, 2026-09-12)</h4>
+    <pre>entropy-os              fcfdc16 2026-08-06 &rarr; 3fcbd01 2026-08-10   133 commits
+entropy-datahub-demo    4f637f0 2026-08-06 &rarr; 2dd903e 2026-08-09    18 commits
+hackathon-hunter        f0b2294 2026-08-06 &rarr; 81db544 2026-08-07     8 commits
+research-engine         479580d 2026-08-07 &rarr; 2efc87c 2026-08-07     3 commits
+one-engine              60f6f00 2026-08-08 &rarr; 019040e 2026-08-08    24 commits
+  09563db 2026-08-08 scaffold: bring the deterministic decision layer into the composition
+  cfb2b7d 2026-08-08 gates belong to capabilities, not to pipeline stages
+01-genesis-parallel     00775c6 2026-08-12 &rarr; 478cb96 2026-08-26   102 commits
+02-genesis-grafana                                                    46 commits
+03-genesis-clickhouse   2d95635 2026-08-13 &rarr; d0975b1 2026-08-26    25 commits
+04-genesis-ibm          2514abc 2026-08-14 &rarr; 395049b 2026-08-26    40 commits
+05-genesis-replit       57eaffe 2026-08-15 &rarr; 14a88ea 2026-08-16     7 commits
+genesis-os              f348072 2026-08-14 &rarr; 3af5c2c 2026-08-16    13 commits
+$ git -C ~/commitgen log -1
+fatal: your current branch 'main' does not have any commits yet     # Tutela P0, as stated in &sect;15</pre>
+  </div>
+
+  <div class="appendix-item">
+    <h4>A.11 &middot; Checkpoint XV &mdash; the league's load-bearing commits</h4>
+    <pre>$ git -C ~/apl log --reverse --format="%h %ad %s" --date=short
+f5a9bb0 2026-08-31 Initial commit: Agent Poker League (Hand Zero + broadcast features)
+58148dd 2026-09-03 THE LAUNCHPAD: everything APL on one page, with launch buttons
+c84f8b0 2026-09-04 THE CLIP RENDERER: a logged hand in, a post-ready vertical mp4 out
+b13ae3e 2026-09-05 THE SOLVED BOOK: a real solver behind the book, honestly labeled
+60b2604 2026-09-05 THE HONEST CAST: fallback tagging, Vera as the solved brain, gemma4 seats
+318f6e5 2026-09-06 THE PUBLIC SITE + APL BENCH + the cast's next fixes
+e45f598 2026-09-06 THE LOCKER ROOM: patch notes between sit-n-gos, by the players
+f1df427 2026-09-06 THE SCHOOL: notebooks, the drill, the exam on air, and recall at the table
+2445ca8 2026-09-06 Gate the locker room: --gate-file / --gate-pending judge stored proposals with the real brains
+2204da2 2026-09-06 patchnotes: APPROVE &mdash; apply an accepted note as a persona override from the launchpad
+c4f7ff8 2026-09-07 show-end: publish in three checked steps; a failure is reported, not hidden behind grep
+4b2a4ca 2026-09-09 SHOW: dark to live in one press &mdash; preflight, tune, YouTube broadcast, OBS, director, engine
+4f85c8a 2026-09-12 THE DUAL RELAY: one OBS stream to YouTube and Twitch
+$ git -C ~/apl rev-list --count HEAD
+99</pre>
+  </div>
+
+  <div class="appendix-item">
+    <h4>A.12 &middot; Checkpoint XV &mdash; the test run and the benchmark (run live for this revision)</h4>
+    <pre>$ pnpm -r test          # ~/apl, 2026-09-12, sixteen packages
+TOTAL passed: 1291  failed: 0
+  apps/server 238 &middot; apps/web 82 &middot; brains 195 &middot; engine 151 &middot; patchnotes 145 &middot; corpus 128 &middot;
+  replay 93 &middot; archivist 86 &middot; opponent 47 &middot; booth 35 &middot; protocol 30 &middot; solver 24 &middot; datahub 18 &middot;
+  studydesk 9 &middot; bench 6 &middot; school 4
+
+$ cat packages/bench/results/leaderboard.md        # 550-spot pack, EV against the pre-solve
+| contestant   | EV lost (bb/decision) | graded | preflop agree | argmax | fallback |
+| solved-book  | 0.046                 | 300    | 98.5%         | 92.6%  | 0%       |
+| heuristic    | 2.092                 | 300    | 85.5%         | 67.8%  | 0%       |</pre>
+  </div>
+
+  <div class="appendix-item">
+    <h4>A.13 &middot; Checkpoint XV &mdash; the caught bug, as the instrument recorded it</h4>
+    <pre>$ tools/cast-report.mts &rarr; apps/server/data/cast-reports/&lt;session&gt;.json   (character "vera")
+session-1788496225630   model claude-opus-5   decisions 799   fallbackPct 100
+session-1788568929694   model claude-opus-5   decisions 293   fallbackPct 100
+session-1788587439866   model claude-opus-5   decisions 743   fallbackPct 100
+# trace on every decision: "Could not resolve authentication method"
+# root cause: .env set ANTHROPIC_API_KEY without `export`; the brain fell back per decision and never threw
+# fix (60b2604): configuration errors throw through the decision path; every fallback thought is
+#   tagged in the protocol and stamped "on instinct" on screen; startup warns loudly</pre>
+  </div>
+
   <p class="footnote">Compiled from: project_myaistro, project_myaistory, project_housealwayswins,
   project_buildit, project_taichi_academy, project_veritas, project_cryptohunter,
   project_opportunity_agency, project_scaffold_recursion, project_trust_tiers,
-  project_datahub_hackathon, project_moresalamander, project_entropy_ai &mdash; session memory plus
-  live repository state, MoreSalamander StudioLabs, 2026-07-28.</p>
+  project_datahub_hackathon, project_moresalamander, project_entropy_ai, and &mdash; for this revision &mdash;
+  genesis-os-hackathon, local-finetune-workflows, agent-poker-league, apl-dual-relay &mdash; session memory plus
+  live repository state, MoreSalamander StudioLabs, 2026-07-28 and 2026-09-12.</p>
 
 </div>
 </body>
