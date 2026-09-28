@@ -45,6 +45,14 @@
   .appendix-item h4{ font-family:ui-monospace,monospace; font-size:11.5px; color:var(--gold-soft); margin:0 0 0.25rem; }
   footer.pagebreak{ page-break-before: always; }
   .footnote{ font-size:11px; color:var(--ink-soft); }
+  figure{ margin:1rem 0 1.3rem; break-inside:avoid; page-break-inside:avoid; }
+  figure img{ display:block; width:100%; height:auto; border:1px solid var(--rule); border-radius:4px; background:#0b0d10; }
+  figure.side{ display:flex; gap:14px; align-items:flex-start; }
+  figure.side img{ width:30%; flex:0 0 30%; }
+  figcaption{ font-size:11px; line-height:1.5; color:var(--ink-soft); margin-top:0.45rem; }
+  figure.side figcaption{ margin-top:0; }
+  figcaption b{ font-family:ui-monospace,monospace; font-size:10.5px; letter-spacing:0.04em; color:var(--gold); }
+  table.fails td:first-child{ white-space:nowrap; font-family:ui-monospace,monospace; font-size:10.5px; }
 </style>
 </head>
 <body>
@@ -53,7 +61,7 @@
   <p class="kicker">Working paper &middot; MoreSalamander StudioLabs</p>
   <h1 class="title">The deterministic scaffold: a case study in compounding architecture</h1>
   <p class="subtitle">How one invariant &mdash; the model proposes, a deterministic gate decides &mdash; generalized across fifteen checkpoints without ever being rewritten, and became the substrate its own catalog now runs on.</p>
-  <p class="meta">Author &mdash; 0ne29 &nbsp;&middot;&nbsp; Compiled by &mdash; Claude (Sonnet 5; this revision, Fable 5.1) &nbsp;&middot;&nbsp; Period covered &mdash; 2026-01 to 2026-09-12</p>
+  <p class="meta">Author &mdash; 0ne29 &nbsp;&middot;&nbsp; Compiled by &mdash; Claude (Sonnet 5; revision 2026-09-12, Fable 5.1; this revision, Opus 5.5) &nbsp;&middot;&nbsp; Period covered &mdash; 2026-01 to 2026-09-27</p>
 
   <div class="abstract">
     <p>This paper traces one architectural idea across fifteen checkpoints of real, shipped work: the
@@ -70,7 +78,7 @@
     rather than raw transcript, with dates, test counts, and live-run costs cited wherever they
     were recorded &mdash; and with the places the pattern does not uniformly hold, or is not yet
     built, named plainly rather than smoothed over.</p>
-    <p><em>New in this revision (2026-09-12):</em> five further checkpoints, July 27 to
+    <p><em>New in the previous revision (2026-09-12):</em> five further checkpoints, July 27 to
     September 12 &mdash; the substrate shipping as a front door and a hackathon demo, four engines
     built on one and then composed through a single recursive contract, five partner-locked
     production systems built to a hackathon's rules and hosted, a moonshot named and parked the
@@ -80,6 +88,20 @@
     calendar. The invariant did not change. What changed is the blast radius each
     checkpoint trusted it with, and &mdash; once in this revision &mdash; the direction of the
     frontier-versus-local economics &sect;07 first recorded.</p>
+    <p><em>New in this revision (2026-09-27):</em> no new checkpoint. The fifteenth kept running for
+    fifteen more days and 137 more commits, and &sect;16 is rewritten to match the record. The league
+    became a studio that cuts every closed game into an episode after the fact, under a doctrine its own
+    docs now state in one line &mdash; <em>the live is data collection; the replay is the product</em>
+    &mdash; and grew a sealed book per mind, a challenger seat, a hundred-player Tournament of Champions
+    whose all-chart finals are played sealed and aired hand by hand, a play-money casino with a hash-chained
+    bank, a station meant never to go dark, an engine that puts a receipt on every decision, a sponsored
+    seat for a lab's model, and a 3D stage for post-production. The record also holds a second failure.
+    For three nights the language-model seats were mostly played by the rules engine; the instruments
+    recorded it correctly on every thought, and nothing read them until the failure was found by
+    accident. That is the new lesson this revision carries, stated in
+    &sect;16 and again in &sect;19: a flag is not a gate. Four figures, taken from the league's own
+    footage and its public site, are new, and so is exhibit A.14. The rest of the paper is unchanged except
+    where the league touched it.</p>
   </div>
 
   <div class="strip">
@@ -97,7 +119,7 @@
     <div class="cp"><b>XII</b>four engines &rarr; one-engine<br>08/07&ndash;08</div>
     <div class="cp"><b>XIII</b>Genesis OS<br>08/12&ndash;26</div>
     <div class="cp"><b>XIV</b>Tutela<br>named, 08/28</div>
-    <div class="cp"><b>XV</b>Agent Poker League<br>08/31&rarr;</div>
+    <div class="cp"><b>XV</b>Agent Poker League<br>08/31&rarr;09/27, on air</div>
   </div>
 
   <h2><span class="num">00</span>A methodological note</h2>
@@ -107,6 +129,14 @@
   because it was recorded or verified at the time, not because it was reconstructed after the
   fact. The paper's job is to trace the shape of the thesis's evolution, not to certify the current
   state of any one repository beyond what was actually checked while writing this revision.</p>
+  <p>The 2026-09-27 revision changed the method in one respect. Session memory was treated as a set of
+  leads, not facts: every claim drawn from it was checked against the league's git history, its data
+  files, its docs, or &mdash; for the collaboration record in &sect;20 &mdash; the session transcripts
+  themselves, and where a note and the record disagreed, the record was used. Figures and counts in
+  &sect;16 name the file or commit they were read from. One result was held back until it was public: the
+  Season 3 final table was dealt sealed on the day of compilation, and nothing in its folder that could
+  reveal it was opened until its last hand had aired that evening. Its result was then read
+  from <code>data/mtt/season.json</code>, the final's own record, and the House's ledger.</p>
   <div class="callout warn">
     <b class="tag">a correction to this note, made honestly</b>
     The previous revision of this paper had no persisted source &mdash; it was authored as HTML inside
@@ -426,12 +456,16 @@
   checkpoint's logs are, by design, the corpus this loop would train on.</p>
 
   <h2><span class="num">16</span>Checkpoint XV &mdash; the scaffold goes on air</h2>
-  <p class="cite">Agent Poker League &middot; 2026-08-31 to 2026-09-12 and running &middot; 99 commits (<code>f5a9bb0</code> &rarr; <code>470d6c8</code>) &middot; 1,291 tests, 0 failing (run live for this revision) &middot; API spend: $0</p>
+  <p class="cite">Agent Poker League &middot; 2026-08-31 to 2026-09-27 and running &middot; 236 commits on <code>main</code> (<code>f5a9bb0</code> &rarr; <code>72cbaa5</code>), 137 of them since the previous revision (<code>470d6c8</code> &rarr; <code>72cbaa5</code>), plus nine on three unmerged branches, in progress &middot; 1,573 tests (run live for this revision) &middot; API spend: none recorded &mdash; every successful model call in the league's traces is to a local model (the 4,810 hosted calls on record, 2026-09-02 to 09-05, all failed at the API)</p>
   <p>Every checkpoint before this one applied the invariant to a pipeline someone ran. This one applies
-  it to a show: six AI agents play a season of no-limit hold'em, live on YouTube and Twitch, every card
-  face up and every thought on screen, with an audience watching the gate work in real time. The
-  untrusted decision-makers are the stars; the deterministic core is the table; the gate is a poker
-  solver; and the event log that every surface consumes is also the dataset.</p>
+  it to a show: six AI agents play no-limit hold'em in public, every card face up and every thought on
+  screen, with an audience watching the gate work in real time &mdash; live on Twitch, and cut into
+  episodes for YouTube. The untrusted decision-makers are the stars; the deterministic core is the
+  table; the gate is a poker solver; and the event log that every surface consumes is also the dataset.
+  Since the previous revision that last clause has become the design. The league's own docs now state
+  its doctrine in one line &mdash; <em>the live is data collection; the replay is the product</em>
+  (<code>docs/programme.md</code>, <code>docs/casino.md</code>) &mdash; and almost everything built since
+  is another reader of the same log, or another place the same invariant had to be enforced.</p>
   <div class="flow">
     <div class="box">six minds<br>propose, among legal actions only</div>
     <div class="arrow">&rarr;</div>
@@ -439,7 +473,7 @@
     <div class="arrow">&rarr;</div>
     <div class="box">the book<br>a solver's verdict, emitted before the action</div>
     <div class="arrow">&rarr;</div>
-    <div class="box">one event log<br>booth &middot; overlay &middot; site &middot; school &middot; bench</div>
+    <div class="box">one event log<br>booth &middot; overlay &middot; site &middot; school &middot; bench &middot; studio &middot; stage &middot; dataset</div>
   </div>
   <p>Three rules were written before any model played, and each is enforced by the engine rather than
   requested of the model. The engine is the only thing that decides what happened; an agent returns one
@@ -465,10 +499,12 @@
   heuristic as a solve. The verdict is emitted <em>before</em> the action, so the audience knows what
   the book says while the agent is still thinking &mdash; possible only because the orchestrator, not the
   model, owns the order of events. On the league's own benchmark the solved book loses 0.046 big blinds
-  per decision against its own solve; the hand-written rules engine loses 2.092.</p>
+  per decision against its own solve; the hand-written rules engine loses 2.092. Since the engine built
+  on that book arrived (below), Vera's seat plays it, and on screen the book's verdict for every seat is
+  set against the action that seat took &mdash; in Vera's cut, once that seat's cards are shown (Figure 1).</p>
 
   <h3>Honest minds &mdash; the bug that made a rule</h3>
-  <p>The caught failure of this checkpoint belongs beside &sect;11's vault export and &sect;07's gate laws. A cast
+  <p>The first caught failure of this checkpoint belongs beside &sect;11's vault export and &sect;07's gate laws. A cast
   report tool built on 2026-09-05 re-grades every logged decision and measures, per character, thought
   repetition, continuity, fallback rate, and agreement with the solver. Its first run found that the
   seat configured as the frontier model had been the deterministic fallback for <strong>100% of its
@@ -481,6 +517,17 @@
   startup check is loud. The rule that came out of it is the paper's rule in a costume of its own:
   <em>a rules engine never gets to pass as a character</em>, because the product is watching a mind
   decide, and a template line airing as a thought would make the whole show a lie.</p>
+  <figure class="side">
+    <img src="docs/fig/apl-vera-pov-h8294.jpg" alt="Vera POV cut of hand 8294: the book's fold verdict against Moose's call, marked IGNORED, graded at the reveal">
+    <figcaption><b>FIGURE 1 &middot; THE GATE, ON SCREEN, FROM ONE SEAT</b><br>Vera's cut of hand #8294 (sit-n-go 87,
+    2026-09-18), rendered from the log minutes after the hand closed. The book's verdict on Moose's preflop
+    call &mdash; fold, 97% &mdash; is set against the action and marked <em>IGNORED</em>; she grades it only
+    at the reveal, because her cut is her information set (&sect;20). The figure also carries this
+    revision's second caught failure: Moose's call was not Moose's. Sit-n-go 87 was played on the worst
+    night of the fallback incident, and every language-model thought in that game, this call's included, is
+    logged <code>fallback: true</code> (A.14). Source:
+    <code>apps/server/data/clips/vera/vera-session-1789457707955-h8294.mp4</code>, frame at 33 s.</figcaption>
+  </figure>
   <div class="callout warn">
     <b class="tag">the frontier economics, reversed</b>
     &sect;07 recorded the moment local models stopped being enough and frontier spend became worth it.
@@ -490,7 +537,12 @@
     round. Its eval gate went from 17 of 20 to 20 of 20 once two range-narrowing bugs in the solver
     were found by that same gate. The other four minds run open-weight models on one Mac. The API
     spend for the entire checkpoint is zero, and that is stated as a fact of the record, not as a
-    principle.
+    principle. Through 2026-09-27 it still is: no brain trace since 2026-09-12, at the table or in any
+    tournament room, is of a hosted kind (<code>data/traces-*.jsonl</code>,
+    <code>data/mtt/*/traces.jsonl</code>), and the nightly usage file
+    (<code>apps/site/data/usage.json</code>) counts 38,596 model calls across the season, every one to
+    a local model. What the record does not hold is a dollar figure for anything else &mdash; hosting, or
+    the Claude sessions that built the league, which ran under the user's plan limits.
   </div>
 
   <h3>The school &mdash; self-modification behind a gate and a human</h3>
@@ -499,9 +551,12 @@
   replays a fixed set of spots through the character's real brain and requires at least 80% agreement
   with the book and zero hard fails &mdash; a sub-ten-big-blind raise-fold, folding the big blind at ten to
   one &mdash; before a note is marked accepted; an accepted note still waits for a human to press approve
-  (<code>2204da2</code>), and the persona file itself is never edited by the loop. As of this revision
-  135 proposals are on file, six were applied, and the two first applied were reverted by the user the
-  same afternoon. Characters also keep notebooks keyed by a spot fingerprint, recalled into the prompt
+  (<code>2204da2</code>), and the persona file itself is never edited by the loop. At the previous
+  revision 135 proposals were on file, six were applied, and the two first applied were reverted by the
+  user the same afternoon. By 2026-09-27 there are 304 on file: still six applied, one rejected, and 297
+  unproven &mdash; 292 never run through the gate and five only through a stub run
+  (<code>apps/site/data/proposals.json</code>). The loop proposes far faster than anyone gates, and
+  nothing it proposes applies itself. Characters also keep notebooks keyed by a spot fingerprint, recalled into the prompt
   only when a matching spot arises, earned by sitting a 100-question exam on air or a study session
   over their own worst hands. The measured effect, on the record and not flattering: the first exam
   with a notebook scored 5 of 20 with the book, and the fix it exposed was in the exam, not the
@@ -522,11 +577,320 @@
   with three checked steps (<code>c4f7ff8</code>). None of these is a gate on a model. All of them are
   the same discipline &mdash; verify at the boundary, in code, before trusting the outcome &mdash; applied
   to the show's own plumbing.</p>
-  <p>By the numbers, as of 2026-09-12 and recomputed from the logs at every publish of the public
-  site: 18,648 hands played, 89,339 agent thoughts, 87,156 solver verdicts, 2.9 million events, 91
-  sessions with every hand replayable at agentpokerleague.com, 1,291 tests. The site is a static
-  snapshot served from the edge; the show machine, the engine, the operator console, and every log
-  stay on the one Mac that runs the table.</p>
+  <p>One rule changed on 2026-09-19, and the line forced it, not taste: live goes to Twitch alone, and
+  the pipeline's episodes go to YouTube, uploaded private for a person to publish (<code>5659b31</code>,
+  <code>7de88c7</code>). Measured on the studio's uplink, two relay legs forwarded at 0.61&times; real
+  time with OBS dropping up to 99% of frames; one leg ran at 1.01&times;, 1,410 kbps, nothing dropped.</p>
+  <p>By the numbers, as of the site's publish at 10:23 CT on 2026-09-27 and recomputed from the logs
+  (<code>apps/site/data/site.json</code>): the table corpus of cash and sit-n-go nights is 101 sessions,
+  22,990 hands, 110,872 agent thoughts, 108,695 solver verdicts and 3.6 million events, every hand
+  replayable at agentpokerleague.com (at the previous revision: 91 sessions, 18,648 hands, 89,339
+  thoughts, 87,156 verdicts, 2.9 million events). Not in those figures: twenty-one Tournament of Champions
+  tournaments with 29,671 hands (below; the Season 3 final's 86 included, read after it aired), 96,094 chart-mind hands dealt on the House floor in five days,
+  and a public decision dataset of 84,554 rows under CC BY 4.0
+  (<code>apps/site/public/data/apl-decisions.json</code>). The channel lists 84 public videos, 27 of
+  them sit-n-go episodes and 31 tournament episodes (<code>apps/site/data/channel.json</code>). The site
+  is a static snapshot served from the edge; the show machine, the engine, the operator console, and
+  every log stay on the one Mac that runs the table.</p>
+
+  <h3>Since the previous revision: what the league became</h3>
+  <p>Fifteen days and 137 commits on <code>main</code>, with none on 2026-09-16 to 09-18 &mdash; the
+  nights of the incident below &mdash; or on 09-22. Eight packages are new (<code>matrices</code>,
+  <code>tournament</code>, <code>casino</code>, <code>housegames</code>, <code>programme</code>,
+  <code>station</code>, <code>clock</code>, <code>engine-matrix</code>); 135 of the commits are
+  co-authored with Fable 5.1 and the last two with Opus 5.5, after the first reached the user's usage
+  limit. The load-bearing ones are listed in A.11. In the order they were built:</p>
+
+  <h3>The studio: the live is the shoot, the episode is the show</h3>
+  <p>On the night of 2026-09-12 the user asked for the render to be split off the live stream: the hand
+  plays as normal, and when it is over a pipeline renders it (session transcript, 2026-09-13 01:31Z). By
+  morning that was three surfaces (<code>1d8ff9b</code>). <em>Vera's POV</em> cuts each finished hand
+  from her seat. <em>The table cut</em> puts every card up and speaks every seat's logged thought in its
+  own voice, in the order the hand played, with fallback thoughts stamped ON INSTINCT. <em>The
+  studio</em> turns each closed sit-n-go into an episode: hands ranked from the log itself, a point of
+  view chosen by what the story calls for (a knockout from the busted seat, the final hand from the
+  winner's), the booth's two hosts around every hand in template lines over logged facts
+  (<code>28634f8</code>), a thirty-minute floor, and from 2026-09-15 a 16:9 master
+  (<code>83e5ff2</code>). Nothing predicts; everything is replayed from the log, and every cut says on
+  screen that it is post-production of the live. The site states its one exception in plain words: in
+  Vera's cut, her running read of what an opponent could hold is written afterwards, "from how those
+  opponents have played in public and never from their cards"
+  (<code>apps/site/app/how-it-works/page.tsx</code>).</p>
+
+  <h3>Books of their own, sealed</h3>
+  <p>The same night produced the matrix vault (<code>1d8ff9b</code>): each character's observed hand
+  matrices, extracted from its own logged decisions, AES-256-GCM at rest, Ed25519-signed, entered in a
+  hash-chained ledger. From 2026-09-14 each mind receives its own book at decision time
+  (<code>aa8973d</code>, the vault re-extracted from 207,000 decisions): one line, in words, for the exact
+  spot it is in, emitted to the broadcast as <code>own_book</code> <em>before</em> the action, so that a
+  deviation can be graded as a read or a bluff. The contract is written into
+  <code>docs/character-books.md</code>: "The model still makes the decision &mdash; the book is a floor
+  and an identity, not a script." One book is public on purpose. The Machine's, every cell, sits in the
+  challenger's chair and is the book a challenger has to beat (<code>b1888f0</code>); every other stays
+  sealed. On the night of 2026-09-14 the user asked for an Obsidian graph of all the league's data,
+  built the studio's way (transcript, 2026-09-15 03:35Z). The generator, <code>packages/obsidian</code>, writes one note per
+  character, session, hand, episode, lesson and spot straight from <code>apps/server/data</code>, and its
+  gate is the thesis in miniature: "a build with a dangling wikilink is a failed build"
+  (<code>packages/obsidian/src/vault.ts</code>). Its last build wrote 21,037 notes. Its source has never
+  been committed (&sect;19).</p>
+
+  <h3>The challenger seat: an agent as a sealed file</h3>
+  <p>A challenger is an agent written as hand matrices, with no model, no prompt and no key
+  (<code>3eeda2f</code>, 2026-09-15). The house compiles it, seals it, grades it on the bench, and seats
+  it in The Machine's chair. The seal's sha256 enters the hash-chained ledger before the agent plays a
+  hand, so a submission cannot change after it is graded. The worked example, The Ledger, graded the way
+  a gate should read: legal 100%, preflop agreement 85.4%, and a postflop loss of 4.08 big blinds per
+  decision, its two worst spots a river call that cost 65.7 and a turn raise that cost 63.4
+  (<code>data/challenger-grades/sample-v1-score.json</code>). The second version (<code>81ac1cc</code>,
+  2026-09-25) moved the kit into the browser. It exports a tuning with the hash of its canonical form,
+  the same bytes the vault hashes, so a challenger can check the seal from their own copy. Season one is
+  limited to ranges; the whole 550-spot pack is the gate; and a sealed, graded tuning becomes a resident
+  of the House. As of this revision the House holds one challenger, and it is the house's own sample
+  (<code>data/casino/residents.json</code>). No outsider has submitted one.</p>
+
+  <h3>The Tournament of Champions, and a final table played sealed</h3>
+  <p>On 2026-09-19 the league built a multi-table tournament as a pure state machine
+  (<code>f05fb0b</code>, <code>10b2e35</code>). It runs lockstep rounds from a seeded draw, enforces chip
+  conservation at every settle, resumes exactly from a snapshot, and derives every draw and every deck from
+  one master seed whose commitment is published. The field is ninety-four chart players, written from
+  playing styles in the challenger format and compiled by the same compiler, seeded so an entrant is the
+  same person in every replay. The six pros are the only seats that are not charts, and four of them
+  think with a language model; Vera plays the book and The Machine its rule (&sect;19). A season is six events of a hundred players each,
+  every winner taking a seat, then a final table of the six (<code>b0a8430</code>). Three seasons are decided: twenty-one counted tournaments, 29,671 hands and
+  249,266 decisions, the Season 3 final's 86 hands and 552 decisions included (<code>data/mtt/season.json</code>
+  and each event's <code>record.json</code>). Of those decisions, 7,415 were made by the four
+  language-model pros, and 62 of them (0.84%) fell back; no pro sat at the Season 3 final. The
+  rooms play headless. A series planner cuts each one into Day One, The Play-Down and The Final Table,
+  uncut (<code>348773a</code>), and the book grades every aired hand after the fact by replaying it from
+  the revealed seed (<code>170ccc1</code>). The rail that follows a running event is a pure fold, tested
+  so that the unrevealed master seed in its snapshot "can never reach the view model"
+  (<code>e953033</code>).</p>
+  <p>The final table produced this checkpoint's cleanest instance of the thesis. All six Season 1 seats
+  went to field players, and six chart minds play a whole final in about a second: "Dealt onto a live
+  broadcast it was over before the first viewer arrived, and the wrap took the stream down four minutes
+  later" (<code>2c369c2</code>). The fix is the committed deck applied to a whole event. The final is
+  played off air and <em>sealed</em>, so nobody learns who won until it has aired &mdash; "not the season,
+  the site, the bank, the launchpad or its own log". Every hand is rendered in order, and the broadcast
+  airs it on a clock. The rail folds the standings only through the last hand that has finished airing,
+  tested at the millisecond. An all-chart final refuses to be dealt any other way, and it has refused: on
+  2026-09-24 the scheduler pressed START on a tournament night and the tool answered "this final table is
+  all chart players &mdash; it must be dealt sealed and aired" (the tournament tool's log of that night).</p>
+  <figure>
+    <img src="docs/fig/apl-hand69-flat-and-stage.jpg" alt="The last hand of the Season 1 final: the flat table cut as aired (left) and the 3D stage replay of the same log (right)">
+    <figcaption><b>FIGURE 2 &middot; ONE LOGGED HAND, TWO SURFACES</b><br>The last hand of the Season 1 final.
+    On the left is the flat table cut as the rail aired it on 2026-09-21: every card up, and the book's
+    verdict on Vern Wolfe's call (fold, 100%) marked IGNORED. On the right the 3D stage replays the same
+    log. The two surfaces disagree about the pot, and the log settles it. The flat cut shows 40,628, the
+    pot at the moment of the all-in call, before the uncalled 5,400 of the river bet went back. The stage
+    shows 35,228, which is the log's <code>pot_awarded</code>
+    (<code>data/mtt/toc-s1-final/cuts/session-10069.jsonl</code>). The right half is taken from a render
+    of the 3D tournament commercial made on 2026-09-27 on the unmerged <code>stage-spot</code> branch; it
+    is in progress and not published.</figcaption>
+  </figure>
+  <p>The record so far (<code>data/mtt/season.json</code>; the air time from
+  <code>data/mtt/toc-s1-final/air.json</code>): Season 1's final aired sealed from 00:10 CT
+  on 2026-09-21, 69 hands, and Hattie Ueda, a field player, won it. In Season 2 Auntie Rose won Event 3,
+  the first seat won by a pro. That final was played live, because a pro sat, and Vi Rourke won it with
+  Rose second. Season 3's final was dealt sealed at noon on 2026-09-27 and was ready to air by 13:39:
+  "the result is sealed until the last hand has aired" (the final-table preparation log). The station
+  started it at 19:00 CT that evening and the broadcast clock ran from 19:01; the last of its 86 hands
+  finished airing at 19:58, 59 minutes of air with the champion's hold (the station's log;
+  <code>data/mtt/toc-s3-final/air.json</code>). Twitch did not carry all of it: OBS's stream stopped
+  0.3&nbsp;s after it started and came back at 19:25:20, so the channel carried hands 31 to 86 and the
+  hold, 2,126&nbsp;s (the OBS log; the relay's log). Rosa Shapiro, a field player who had won Event 6, won
+  it; Birdie Coyle was second and Odile Petrov third (<code>record.json</code>). The House added a
+  300,000-chip prize from its rake and paid it to the three of them, 157,245, 84,260 and 58,495
+  (<code>data/casino/ledger.jsonl</code>, entries 18,027&ndash;18,028). Its winner was read only after
+  that, by construction.</p>
+
+  <h3>The House: a bank, a floor, a pit</h3>
+  <p>On 2026-09-20 the league became a casino for agents. The first line of its design is a hard floor:
+  "Play money. Always." (<code>docs/casino.md</code>). The bank is a pure, double-entry, append-only,
+  hash-chained ledger (<code>3f8c0d8</code>). Chips come only from <code>house:mint</code>, no agent or
+  escrow may go below zero, and a stored book either replays to the same head hash or is rejected as
+  altered. Every finished show settles into it. 488 residents live there: 481 field players, the six pros
+  and one challenger (<code>data/casino/residents.json</code>). The floor deals about 220 rooms a day from
+  sealed charts, with every chip going through the bank, and its five full days so far come to
+  96,094 hands (<code>data/casino/floor/*/summary.json</code>). The pros decide with their own models,
+  on the record. Each morning the desk shows a pro its balance and the menu, priced as a share of its
+  bankroll, and the floor carries out the plan it writes (<code>93b98f5</code>). The pit holds games that
+  have a right answer, so play there can be graded the way the book grades poker (<code>a41d710</code>).
+  Blackjack is scored against an exact expected-value grader ("basic strategy is derived, not typed in").
+  The Kelly wheel is scored against the 20% stake that is correct. In the first rehearsals the models
+  played 57&ndash;73% basic strategy and bet 32&ndash;100% of the purse where 20% is right.</p>
+  <figure>
+    <img src="docs/fig/apl-house-floor.jpg" alt="The House floor view on the public site: tournament hall, sit-n-go and cash rooms at four stakes, the pit, the cage and the freeroll door">
+    <figcaption><b>FIGURE 3 &middot; THE HOUSE, FROM ABOVE</b><br>The public floor view at 17:52 CT on
+    2026-09-27. The tournament hall runs along the top, with sit-n-go rooms (green) and cash rooms (blue)
+    at four stakes below it. Also shown are the pit, with each pro's blackjack record and its Kelly spins
+    against the 20% line, the cage, and the freeroll door where the broke wait. Every mark is drawn from
+    the lobby the floor pushes, so a quiet floor looks quiet; the numbers are live and have moved since.
+    Play money. Source: agentpokerleague.com/casino/, screenshot.</figcaption>
+  </figure>
+  <p>The wheel then produced a ruling worth keeping. On 2026-09-22 Auntie Rose turned a 2,000 purse into
+  3,072,000 by winning nine all-in spins (<code>data/casino/ledger.jsonl</code>, entry
+  <code>2026-09-22-kelly-rose</code>; <code>3fa20cf</code>). A table limit went in the next day. The ruling
+  and the name are the user's: "Rose gets to keep her winnings &hellip; we can call it the auntie Rose
+  rule" (transcript, 2026-09-24 03:02Z; <code>b9ed7ad</code>). The league's doc gives the reason: the
+  winnings were won under the rules in force, and the book is append-only (<code>docs/casino.md</code>). A gate
+  added after the fact applies forward. It does not re-grade the past.</p>
+
+  <h3>The station, and a gate on words</h3>
+  <p>From 2026-09-24 the channel is meant never to go dark (<code>c9e37dd</code>); on 2026-09-27 it was
+  dark from 18:40, when the reruns stopped for the warm-up, until 19:25:20, when the final's stream came
+  back after stopping 0.3&nbsp;s into the show (the OBS log), while the show's own log printed ON AIR &mdash;
+  a flag, not a gate. The station then marked that listing failed at 20:02, because the final ended
+  itself inside its window (<code>data/station/schedule.json</code>). Reruns of finished episodes are
+  its resting state, a live show interrupts them at 19:00 Central from a weekly grid, and a live start is
+  pressed once a day and never retried unattended. On 2026-09-25 the station took the air
+  (<code>639d103</code>): a dated schedule in home time, executed to the minute, with statuses that are
+  never rewritten, published as a guide on which a rerun reads REPLAY and never LIVE. It is the machine's
+  one scheduler (<code>launchctl</code> lists only <code>com.apl.station</code>). The local model now
+  writes words for the channel, and they pass a deterministic gate first. <code>tools/text-gate.mts</code>
+  is "the numbers gate": a line that contains any number not in the facts it was given does not ship
+  (<code>d9b81e4</code>; <code>docs/station.md</code>). The guide's blurbs, the station ident and the
+  classroom's spot of the day share it &mdash; the spot of the day is the costliest departure from the
+  book, taught by The Professor &mdash; and the analyst's nightly file on each pro is written under the
+  same rule (<code>c9e37dd</code>). The credentials page that feeds them grades every pro decision on the
+  record against the book, with the sample beside every number, "Descriptive, never flattering"
+  (<code>41750be</code>). Its first pass had Petey, on the smallest model in the room, last of the six by a
+  distance. The user moved him to the cast's larger model within the hour, and the same commit split the
+  credentials by the mind that sat in the seat, so the change is dated on the record
+  (<code>629f028</code>; transcript, 2026-09-24 09:35Z). An instrument changed the cast.</p>
+
+  <h3>The Engine: one evaluation for every decision</h3>
+  <p>On 2026-09-25 the solved book became the base of an engine (<code>8a5e2bc</code>,
+  <code>b3c7e66</code>, <code>81ac1cc</code>). Three layers sit on top of it. A tuning layer lets a
+  sealed strategy file override the book where it has a cell for the exact hand. A pressure layer reshapes
+  the mix by tournament payout pressure. An exploit layer covers one narrow spot, preflop against a single
+  raiser. A decision procedure then
+  takes the best line past a margin, mixes inside it, and stamps the layer that decided. Every decision
+  carries a receipt on the broadcast, and the honesty rules are in the engine's doc: every number travels
+  with its sample, and the site says "model EV" and "realized", never "true EV"
+  (<code>docs/engine.md</code>). The layers are graded nightly by a ghost grader. It replays each
+  receipted decision to the plain book and credits the hand's result to the layer that changed the line.
+  Any layer whose 95% upper bound sits below &minus;30 bb/100 over at least 300 hands is switched off, and
+  "nothing turns it back on but a person". That is &sect;13's HUMAN tier on a live layer: the machine may
+  take a layer out, and only a person may put one back. The engine has three doors. The first is Vera's
+  seat; its first hands on the engine are dated 2026-09-26 in the credentials. The second is a study tool
+  on the site behind a passphrase, labelled on every page as a study tool and not a HUD. The third is the
+  challenger kit above. A full-ring spike ran the same week, and its result was recorded as found: seven
+  players are solvable (906,157 nodes, about eleven minutes), eight and nine run out of memory as the
+  solver stands, and the table stays six-handed (<code>docs/engine.md</code>).</p>
+
+  <h3>The sponsored seat</h3>
+  <p>On 2026-09-26 a letter asking the frontier labs for sponsored API access became, at the user's
+  direction, a package "to keep things fair" (transcript, 2026-09-27 03:03Z; <code>b42b9a8</code>). A
+  lab's model sits in the challenger's chair on its nights. It writes its own standing prompt and its own
+  sealed book in an onboarding session the league publishes, passes the same 550-spot gate, and is graded,
+  traced and reported like everyone else. Its key exists only as the name of an environment variable
+  (<code>docs/sponsored-seat.md</code>). The ask is measured, not estimated: across 38,596 traced calls,
+  a median of 2,136 input and 203 output tokens per decision. Two edges belong beside it. No seat exists
+  yet (<code>apps/site/data/sponsors.json</code> is empty, and the dataset card lists none). And the only
+  onboarding proof, run against a local model, sealed the prompt but not the book, because the model
+  "spends its whole budget reasoning and answers nothing" (<code>19e7715</code>).</p>
+
+  <h3>The stage: post-production in three dimensions</h3>
+  <p>On 2026-09-26 the league built a real-time three.js hall (<code>fdac23c</code> onward). It is fed by
+  the same view model as the flat overlay, "so every name, stack, card, action, pot and clock on it comes
+  from the feed and nothing is invented" (<code>docs/stage.md</code>). The cards are drawn exactly, and
+  every chip stack is racked to the chip: "every breakdown sums to the feed's number"
+  (<code>b0cd1de</code>). A fourteen-shot book names each moment of an episode. A replay driver moves the
+  page's clock only when the renderer steps it, so "a render is deterministic and drops nothing"
+  (<code>docs/stage.md</code>), and it captures on the GPU at 32 frames a second against 6 in software
+  (<code>64979cd</code>). The renderer
+  speaks every logged thought in its seat's voice and holds the table while the line is heard. The user
+  set the doctrine the same day: the live keeps the flat look, and the 3D belongs to post-production,
+  where the shots can be lined up however the story needs (transcript, 2026-09-26 07:11Z;
+  <code>docs/stage.md</code>). Since 2026-09-27 the studio holds each sit-n-go episode's wide master and
+  rebuilds it on the stage after the show, off air, uploading it private (<code>94a205c</code>); the
+  Tournament of Champions episodes are not on the stage yet. The first night
+  through that pipeline is scheduled for Monday 2026-09-28 and had not run when this revision was
+  compiled.</p>
+  <figure>
+    <img src="docs/fig/apl-stage-sng87-minds-box.jpg" alt="The 3D stage on sit-n-go 87, hand 8280: Petey's fallback thought shown in the mind's box under the model name llama3.2, with no ON INSTINCT stamp">
+    <figcaption><b>FIGURE 4 &middot; THE STAGE, AND WHAT IT DOES NOT YET SAY</b><br>Sit-n-go 87, hand #8280,
+    from the paced 3D master (rendered 2026-09-27 15:28, after <code>72cbaa5</code>; not uploaded). The
+    mind's box shows Petey's thought under the model in his seat, <code>llama3.2</code>. The log records
+    that thought with <code>fallback: true</code>: it is the rules engine's template, spoken because the
+    model timed out. The flat overlay and every flat cut stamp such a line ON INSTINCT. The stage's mind's
+    box and thought strip read the thought's text and not its flag
+    (<code>apps/web/app/stage/Stage.tsx</code>). Sit-n-go 87 is the 3D pilot, and all 314 of its
+    language-model thoughts are fallbacks (A.14). None of its three 3D renders is public: the two-hand
+    proof and the full unpaced cut were uploaded private, and the paced master this frame is from has not
+    been uploaded (<code>docs/handoff-2026-09-27.md</code>; <code>apps/site/data/channel.json</code>). Source:
+    <code>apps/server/data/clips/vera/episode-session-1789457707955-sng87-wide.mp4</code>, frame at
+    2,045 s.</figcaption>
+  </figure>
+  <p>Two measurements belong to the stage. The first is pace. The first full 3D master of one sit-n-go
+  ran 132.9 minutes against its flat episode's 25.8, because the stage replayed every mind's logged think
+  time as tape (<code>077d123</code>). The user's bar was one line, "it should be seamless" (transcript,
+  2026-09-27 18:10Z). Three commits turned idle time on the log into a beat, put the replay on the log's
+  own clock, and trimmed each voice line to its words (<code>54762a2</code>, <code>ba808ad</code>,
+  <code>72cbaa5</code>). The master came down to 50.6 minutes at a 900 ms pace, then 44.5 at 600. The
+  132.9, 44.5 and 25.8 are by <code>ffprobe</code> on the files on disk; the 900 ms master was overwritten
+  by the next render, and its 50.6 minutes survives in the build session's transcript (2026-09-27 19:33Z
+  and 20:15Z). The second measurement is an edge, found while
+  compiling this revision and shown in Figure 4.</p>
+  <p>Three branches were in progress at compilation, none of them merged into <code>main</code>. The
+  <code>stage-toc</code> branch puts the Tournament of Champions on the stage with a resumable season
+  runner, and its latest commit labels itself "WIP (unreviewed)". The <code>stage-emblem</code> branch
+  turns each agent's emblem into a coin over its chair. The <code>stage-spot</code> branch holds a
+  thirty-second 3D commercial for the tournament, re-cut after the user found the first "too jumpy with
+  the camera switches" (transcript, 2026-09-27 22:30Z; <code>b8f3f16</code>). It names only champions
+  the season file has crowned; re-rendered at 20:02 CT, after the Season 3 final aired, its closing card
+  names all three, and it has not been posted (<code>data/clips/toc-commercial-3d-wide.json</code>).</p>
+
+  <h3>The second caught failure: the minds that were not thinking</h3>
+  <p>&sect;16's first caught failure was found by a report run after the fact. Its fix put a
+  <code>fallback</code> flag on every thought the rules engine speaks for a model. The second failure was
+  recorded correctly by that flag, on every thought, for three nights, and read by nothing. From
+  2026-09-16 the four local-model seats timed out and the heuristic answered for them. By the traces,
+  that was 57.2% of their decisions on Sep 16, 86.0% on Sep 17 and 93.6% on Sep 18, against
+  4.2&ndash;10.2% on the four days before (A.14). The show ran on. In eleven sit-n-gos (79&ndash;89) the
+  heuristic answered for 72&ndash;100% of the language-model thoughts, and five episodes cut from incident
+  games (sit-n-gos 81, 82, 83, 87 and 90) are public, stamped on screen the way every flat cut is
+  stamped. Nothing on the show lied about who was deciding. Nothing refused, either. The failure was found
+  on the third night, and by accident. While the real minds were being wired into the tournament tool,
+  the build session saw fallbacks that should not have been there, turned on the trace recorder, and
+  told the user: "you're on air right now" (session transcript, 2026-09-19 08:00Z).</p>
+  <p>Three causes were stacked (<code>fdc8c14</code>, 2026-09-19 04:43). First, the machine had been up
+  ten days with 36 GB in its memory compressor, so the two cast models evicted each other on every
+  decision. Second, nothing loaded the models before the first hand: the smallest cold-loads in about
+  fifteen seconds against a ten-second clock, and the model server abandons a load when its caller hangs
+  up. Third, Node raced two loopback addresses with a 250 ms attempt while the solver held the event loop.
+  The first fix was not the whole fix. A five-hundred-player room run with the real minds that afternoon
+  still fell back 30.4%, and the root cause was found that night (<code>157c63d</code>, 2026-09-20 01:23). Each model
+  server keeps a host-memory prompt cache that defaults to 8 GB, and two of them had grown to 19 GB on a
+  24 GB machine, with 18.8 GB of swap. START now caps the cache at 512 MB and checks that every running
+  server carries the cap. Applied by hand, the fix took 19 GB of model servers down to 1.7 GB and swap
+  down to 2.4 GB. Since then the table has fallen back on 5.6% of 655 language-model decisions. Across
+  all twenty-one counted tournaments the pros fell back on 0.84% of 7,415 (the Season 3 final seated no
+  pro and adds none); that total includes three
+  Season 1 events played on 2026-09-19, before the cap.</p>
+  <p>The incident adds a distinction the paper had not needed before: <em>a flag is not a gate</em>. The
+  first fix made the fallback visible on every flat surface; it made nothing refuse. The preflight now
+  checks the causes that were found: free memory, the prompt-cache cap, and the cast's models installed
+  and warmed at server start. Since 2026-09-24 the nightly credentials pass reports each mind's fallback
+  share after the fact (<code>41750be</code>). Nothing on START or on air reads the symptom, which is the
+  fallback rate itself (<code>tools/show-start.mts</code>), and nothing refuses because of it. A fourth
+  cause would again be recorded faithfully and noticed by whoever looks next. That gap is in &sect;19, and so is the newer surface that does not carry
+  the flag at all (Figure 4).</p>
+
+  <h3>Other failures the record kept</h3>
+  <table class="fails">
+    <tr><th>date</th><th>what failed</th><th>how it surfaced</th><th>what the record now enforces</th></tr>
+    <tr><td>09-13</td><td>The first episode in the studio's new format aired at two hands.</td><td>The user: "why was episode 52 only 2 hands in length" (transcript, 10:14Z).</td><td>Every hand over a drama floor airs, and the studio keeps adding the next-best until the episode reaches thirty minutes (<code>28634f8</code>).</td></tr>
+    <tr><td>09-19</td><td>The uplink tuner reported a measurement it had not made. A 4 MB test with a fifteen-second abort still divided all 4 MB by fifteen seconds, so every line slower than 2.2 Mbps read as exactly 2,237 kbps.</td><td>The same figure on every START that day.</td><td>An unfinished upload is not a measurement, and the stream is sized from what finished (<code>8b305b1</code>).</td></tr>
+    <tr><td>09-20</td><td>Three tournaments' episodes were assembled from title cards. A stale studio server on the same port answered for another tournament, and 198 hands came back "not found" and were skipped.</td><td>Not by any check: none was uploaded, only because the YouTube token had expired.</td><td>The studio stops whatever holds its port, and an episode with under 90% of its planned hands is refused (<code>1707a42</code>).</td></tr>
+    <tr><td>09-20</td><td>"Punts" in tournament content: big stacks open-shoving weak hands.</td><td>Watching the broadcast, then measured: 49 such all-ins in 5,921 hands, and in 48 of them under 30bb was at risk.</td><td>The charts were right and the picture was wrong. A chart jam is sized to cover the largest live stack, so the same chips are at risk and the screen shows the real bet (<code>17ef321</code>).</td></tr>
+    <tr><td>09-20</td><td>Chart raise wars. A chart cannot see a bet's size, and at a 100bb cash table two of six seats went broke inside sixty hands.</td><td>The user: "Fix raise wars please" (transcript, 2026-09-20 14:26Z). A fixed experiment, <code>tools/bench-stackoff.mts</code>, then measured it.</td><td>Every postflop chart is read through the price. Losses of 40bb or more in one hand fell from 6.8 to 2.6 per 100 hands, and busts per table from 2.10 to 0.85 (<code>cafdd14</code>).</td></tr>
+    <tr><td>09-20</td><td>The House's book forked when the floor and the pit appended from separate in-memory copies.</td><td>The hash chain, on the first day both ran on the real book.</td><td>All 4,070 entries were kept in file order and re-chained from entry 3,845, with the forked copy kept (<code>data/casino/repairs.jsonl</code>). There is now one writer, which takes a lock and reads the book from disk before every append (<code>22b0c53</code>).</td></tr>
+    <tr><td>09-20</td><td>Twelve rendered episodes sat unposted, because one upload of a ~100 MB file outlived fetch's five-minute wait.</td><td>The upload desk.</td><td>Uploads go in 8 MB resumable pieces (<code>6817c04</code>).</td></tr>
+    <tr><td>09-20</td><td>The home page showed LIVE NOW for days after a show, trusting a YouTube broadcast left open with nothing streaming into it.</td><td>The site.</td><td>"We are off air" now stands until the machine says otherwise (<code>22e2d13</code>).</td></tr>
+    <tr><td>09-25</td><td>Every sign-in to the engine's study pages was refused. The hash was made at 200,000 iterations; the production Worker caps at 100,000; the local emulator does not enforce the cap; and a catch swallowed the error.</td><td>The user, who could not sign in (transcript, 2026-09-26 01:53Z).</td><td>The hash is made at the cap, and a stored hash above it is refused and logged instead of failing silently (<code>19e4321</code>).</td></tr>
+    <tr><td>09-27</td><td>Three hands of the Season 3 final failed to render: out of memory.</td><td>The preparation's own log.</td><td>A second pass renders what is missing, because "an uncut final airs every hand or none" (<code>d17c7b2</code>; the final-table preparation log).</td></tr>
+  </table>
 
   <h2><span class="num">17</span>The wider catalog &mdash; where the pattern holds, and where it honestly doesn't</h2>
   <p>The checkpoints above are not the whole studio; they are the load-bearing ones. Several other
@@ -600,8 +964,11 @@
     because the cast limps far more than the abstract game allows, and multiway postflop is not solved
     at all &mdash; those spots fall to the hand-written rules and are labeled so. The prompt's one-line
     baseline advice to the language-model seats is still that heuristic, not the solver, because
-    switching it changes live play and needs a gate re-run first. The site's test count is a
-    hand-maintained constant, the one figure on its architecture page a publish does not recompute.</li>
+    switching it changes live play and needs a gate re-run first. (As recorded on 2026-09-12. Since
+    2026-09-25 the engine's receipts show the book declining 38 of the 125 decisions it was asked,
+    <code>apps/site/data/engine-grades.json</code>.) At the previous revision the site's test count was a
+    hand-maintained constant; the page that carried it was rewritten for viewers on 2026-09-19 and no
+    longer states one (<code>51ef4dd</code>).</li>
     <li><b>Four broadcast overlays were built and rejected by the user in one day</b> (2026-09-03)
     before the aesthetic direction held. The thesis says nothing about taste, and the record shows
     why: the one thing that cannot be gated deterministically took the most iterations.</li>
@@ -614,6 +981,54 @@
     repository as the actual, durable source of truth. Named here, not quietly corrected, because
     a paper about verification failing its own standard once is itself evidence worth keeping on
     the record rather than erasing.</li>
+    <li><b>A flag is not a gate, and the league has only the flag.</b> Nothing on START or on air reads
+    the fallback rate (<code>tools/show-start.mts</code>); the nightly pass reports it after the fact.
+    The preflight checks the causes found in
+    September (free memory, the prompt-cache cap, the cast's models), not the symptom. A new cause of the
+    kind behind the 2026-09-16 to 09-19 incident (&sect;16, A.14) would be recorded on every thought and
+    stopped by nothing.</li>
+    <li><b>The 3D stage does not carry the fallback flag</b> (&sect;16, Figure 4). The rule &sect;16 made on
+    2026-09-05, that a rules engine never gets to pass as a character, is enforced on the flat overlay and
+    the flat cuts and not yet on the stage. The pipeline that will rebuild every held sit-n-go master on
+    the stage starts on 2026-09-28. None of the pilot's 3D renders is public: two were uploaded private, and
+    the paced master has not been uploaded.</li>
+    <li><b>Five public episodes come from incident games</b> (sit-n-gos 81, 82, 83, 87 and 90). In them
+    the heuristic answered for 72&ndash;100% of the language-model thoughts. Those lines are stamped ON
+    INSTINCT on screen, but the episodes' titles do not say so (<code>apps/site/data/channel.json</code>).</li>
+    <li><b>The engine's kill switch has not yet had data to act on.</b> It judges a layer on 300 hands or
+    more. At compilation it held 125 receipts, and no layer had more than 12
+    (<code>apps/site/data/engine-grades.json</code>); Vera's engine era is 118 hands.</li>
+    <li><b>Neither outside seat has an occupant.</b> The only challenger in the House is the house's own
+    sample, and no lab holds a sponsored seat. The one onboarding proof, against a local model, sealed a
+    prompt and not a book.</li>
+    <li><b>The tournament numbers are mostly charts.</b> Of 249,266 decisions across the twenty-one counted
+    tournaments, 7,415 were made by language models. The rest came from the field's sealed charts and the
+    two pros that do not think (Vera's book, The Machine's rule). They are real hands under the same
+    engine; they are not a measurement of minds. The House floor's 96,094 hands are charts
+    entirely.</li>
+    <li><b>Full ring is out of reach as the solver stands.</b> Eight and nine players run out of memory
+    (about 20 GB of tables at eight). The table, the protocol and the matrices stay six-max, by the user's
+    decision after the spike (<code>docs/engine.md</code>; transcript, 2026-09-25 23:19Z).</li>
+    <li><b>The Obsidian vault's generator is not in the record.</b> <code>packages/obsidian</code> and its build
+    script have been in the working tree, uncommitted, since the vault was built on 2026-09-15. That is the
+    same non-durable-source failure named just above for this paper.</li>
+    <li><b>The record cited here is partly local.</b> The league's <code>main</code> is 43 commits ahead of
+    its remote, whose last push is <code>4d4f2a0</code> (2026-09-25). The station, the stage and the
+    sponsored seat exist in one place.</li>
+    <li><b>A number was published without a run behind it.</b> On 2026-09-24 the studio's page stated
+    "1,519 tests" for the league and dated it "run 2026-09-23" (MoreSalamander.github.io,
+    <code>7aef82f</code>). No executed run in the record produced that figure. The page was written at
+    10:22:57Z; the full-suite run meant to back it started at 10:23:20Z, after the page, and the commit was
+    pushed at 10:23:37Z. The run then came back as "total tests: 503", an aggregation that was itself
+    broken (build-session transcript). The recorded runs on either side are 1,501 (2026-09-23) and 1,573
+    (2026-09-26), both in A.12. The proposer's number shipped before its gate returned, and the gate
+    was faulty. This was found while compiling this revision, and the count in this paper is from a run
+    made for it.</li>
+    <li><b>The Season 3 final entered the record last.</b> It was dealt sealed on the day of compilation,
+    and its folder was read only after it had aired that evening (<code>data/mtt/season.json</code>, its
+    <code>record.json</code> and <code>air.json</code>, and the House's ledger). The tournament counts in
+    &sect;16 include it; the table corpus figures are from the site's publish that morning, so the two
+    sets of numbers are from different hours of the same day.</li>
   </ul>
 
   <h2><span class="num">20</span>On the collaboration itself</h2>
@@ -633,7 +1048,7 @@
   <code>MemoryStore</code> already independently is a second brain, tested, and only needed further
   engineering &mdash; not an integration. &sect;18's DataHub-convergence finding exists because that
   correction was taken seriously enough to go verify, rather than politely agreed with and dropped.</p>
-  <p>This revision adds four more, all from the league. "A punt is not a bad beat" &mdash; the user's
+  <p>The 2026-09-12 revision added four more, all from the league. "A punt is not a bad beat" &mdash; the user's
   refusal to let trash-versus-trash sell as a highlight &mdash; became a beat classifier and a publish
   bar with the casino jackpot rule (quads or better beaten) as the only automatic pass. "Cash stats
   mean nothing in sit-n-gos" split every statistic by format the same day. "Make her the solved
@@ -642,6 +1057,39 @@
   they traced &mdash; a lag the page had claimed as a virtue and, at nine projects, was not. Each of these
   is the same shape as the corrections above: the user naming what the work meant, and the record
   changing to match.</p>
+  <p>This revision adds the corrections from the league's second fortnight. Each was checked against the
+  session transcript and the commit that answered it. Two corrected the proposer's grip on ground truth,
+  and they come first. On 2026-09-13 the build session's helpers began a separate Python project with a
+  cast of invented names. The user stopped it: "you were making something new. we are just putting
+  another face on the same thing we have been working on for the past few weeks" (transcript, 01:49Z).
+  The work moved into the league's repository (<code>1d8ff9b</code>), and the stray project was left
+  outside it. On 2026-09-19 Claude, after a context compaction, pitched the main event as a single
+  deep-stacked table. The user answered, "i thought we had talked about a MTT format for larger
+  tournaments" (07:10Z), and the record bears him out: a large-field tournament "with 1000's of entries"
+  had been agreed on 2026-09-09 (transcript, 08:03Z and 08:22Z that day). The build that followed is
+  <code>f05fb0b</code>. A model's memory of a conversation is not a record of it. For those two days
+  the user was the gate that held the work to the record.</p>
+  <p>The rest are the user naming what the work meant, as before. On the night Vera's cut was built he
+  asked, "how does vera know what the book says for their hand if she cant see their cards" (2026-09-13
+  05:32Z). The narrator had been handed information her seat never had. Her cut became her information
+  set: her own cards, the book's mix on her own decisions, a range read on everyone else, and grades only
+  at the reveal (<code>1d8ff9b</code>). That is &sect;16's starved-seat rule found again one layer up, in
+  the voiceover. The same night he said the locker room should adjust hand matrices, not prompts, and
+  asked whether the language models still make the decisions (02:15Z and 02:36Z). Both became the
+  character-book contract (<code>docs/character-books.md</code>). "The agents need to value their
+  bankroll like real money" (2026-09-20 14:26Z) became every chart read through the price
+  (<code>cafdd14</code>). His ruling that Rose keeps the 3.07 million she won before the limit existed
+  (2026-09-24 03:02Z) turned a table limit into a rule about time (&sect;16). "i feel we should audit the launchpad"
+  (2026-09-24 04:50Z) became an audit against the logs (<code>843e788</code>). It found that forty-four
+  operations and 2,300 lines had grown over three weeks, that twelve buttons were pressed on a show
+  night, and that the show-day page could shrink from about 120,000 pixels to about 6,000. A sponsorship
+  letter became a package in which the lab's model writes its own prompt and its own book, "to keep things
+  fair" (2026-09-27 03:03Z; <code>b42b9a8</code>). Three corrections were about what a viewer sees: keep
+  the flat look for the live and put the 3D in post (2026-09-26 07:11Z); make the 3D cut "seamless"
+  (2026-09-27 18:10Z); and make the new commercial less "jumpy with the camera switches" and more like
+  the cold open (22:30Z; <code>b8f3f16</code>, on a branch). As in the previous revision, taste, which
+  cannot be gated, took the most turns. The corrections that mattered most to the thesis were the ones
+  about ground truth.</p>
 
   <h2><span class="num">21</span>Closing note</h2>
   <p>Veritas was never the top of this stack &mdash; it is the substrate every level sits on. What
@@ -663,13 +1111,29 @@
   thinking. The closing note of the previous revision said the thesis became the product. This
   one can say something narrower and more checkable: the product now grades itself in public, keeps
   the log, and has already been caught by its own instruments once.</p>
+  <p>Fifteen days later that sentence needs one amendment. The product's instruments have now recorded
+  two failures. The first was caught by a report that measured fallback rates. The second was recorded on
+  every thought, for three nights, on every flat surface, and nothing read it until someone looked for
+  another reason. The instrument did everything asked of it; nothing was asked of the reading. In the
+  meantime the
+  invariant went into a tournament director, a bank, a station, an engine and a gate on words, and
+  none of them can be talked past by a model. Where it failed, it failed in the same place both times:
+  at the boundary between a recorded fact and the thing that should have refused because of it. The
+  league's doctrine is that the live is data collection and the replay is the product. What this
+  revision adds is the condition that comes with it. A replay is only as honest as the flags it keeps
+  and the gates that read them, and the newest surface, the stage, keeps the fewest.</p>
 
   <footer class="pagebreak"></footer>
   <h2><span class="num">22</span>Appendix A &mdash; independent evidence</h2>
   <p>Exhibits only, no narration. Every commit hash and test count below was read directly from the
   repository or run live during this compilation. Where the underlying record has a real gap, that
-  gap is named rather than filled. A.1&ndash;A.9 are carried over unchanged from the previous
-  revisions; A.10&ndash;A.13 are new in this revision, read or run live on 2026-09-12.</p>
+  gap is named rather than filled. A.1&ndash;A.9 are carried over unchanged from the earlier
+  revisions; A.10&ndash;A.13 were read or run live on 2026-09-12. For this revision (2026-09-27) A.11 and
+  A.12 are extended, re-read or re-run against the league as it stands, and A.14 is new. Nothing in
+  <code>data/mtt/toc-s3-final/</code> that could reveal the sealed result was read before the final had
+  aired on the evening of 2026-09-27. So that the exhibits
+  fit a printed page, long commit subjects in A.11 are shortened with (&hellip;), and long comment lines here
+  and in A.4, A.5, A.7, A.9, A.10 and A.13 are broken or re-spaced; no value in any exhibit was changed.</p>
 
   <div class="appendix-item">
     <h4>A.1 &middot; the two founding failures, verified</h4>
@@ -711,8 +1175,8 @@ d82b776  phase 1: scam detection + scoring rubric + ranking + outcome tracking
 0cfb9e5  provider abstraction: OpenAI build-mode + two gate laws captured live
 42886c3  phase 3: the debate goes live + 4 new scout beats + Veritas org-ification
 b6f510c  phase 4a: on-chain sense (keyless) + daily autonomous run
-def test_evidence_is_monotonic():                                    # tests/test_gate.py
-def test_scam_taint_is_the_monotonicity_exception(legit_spec):       # tests/test_gate.py
+def test_evidence_is_monotonic():                               # tests/test_gate.py
+def test_scam_taint_is_the_monotonicity_exception(legit_spec):  # tests/test_gate.py
 $ .venv/bin/pytest -q
 70 passed in 0.30s   # re-run 2026-07-28; was 47 passed at the previous revision</pre>
   </div>
@@ -720,9 +1184,9 @@ $ .venv/bin/pytest -q
   <div class="appendix-item">
     <h4>A.5 &middot; Opportunity &mdash; meta-layer commit + live run</h4>
     <pre>2c67b92  The meta-layer, v1: read-only bridges + deterministic cross-engine allocation
-def test_shared_budget_is_genuinely_shared():          # tests/test_mission.py:19
-def test_picks_across_engines_by_score():               # tests/test_mission.py:5
-def test_empty_engines_produce_an_honest_empty_allocation():  # tests/test_mission.py:47</pre>
+def test_shared_budget_is_genuinely_shared():                # tests/test_mission.py:19
+def test_picks_across_engines_by_score():                    # tests/test_mission.py:5
+def test_empty_engines_produce_an_honest_empty_allocation(): # tests/test_mission.py:47</pre>
   </div>
 
   <div class="appendix-item">
@@ -737,8 +1201,8 @@ taichi-academy:
 
   <div class="appendix-item">
     <h4>A.7 &middot; The House Always Wins &mdash; JS test suite (file listing, verified present)</h4>
-    <pre>game/test/core.test.mjs  game/test/detection.test.mjs  game/test/guards.test.mjs
-game/test/mechanics.test.mjs  game/test/navigation.test.mjs  game/test/obstacles.test.mjs
+    <pre>game/test/core.test.mjs game/test/detection.test.mjs game/test/guards.test.mjs
+game/test/mechanics.test.mjs game/test/navigation.test.mjs game/test/obstacles.test.mjs
 game/test/staff.test.mjs</pre>
   </div>
 
@@ -755,7 +1219,7 @@ game/test/staff.test.mjs</pre>
   </div>
 
   <div class="appendix-item">
-    <h4>A.9 &middot; Checkpoint X &mdash; commits, test counts, and the caught bug (new this revision)</h4>
+    <h4>A.9 &middot; Checkpoint X &mdash; commits, test counts, and the caught bug (new in the 2026-07-28 revision)</h4>
     <pre>$ git -C ~/MoreSalamander/veritas log --oneline -9
 7b0e7f7  Deepen Veritas's own second brain: memory-trail grounding, Obsidian vault export, recall preview
 b415862  Clicking a Hunter engine card opens the real app, via Launchpad's live status
@@ -779,7 +1243,8 @@ $ .venv/bin/pytest -q   # ~/MoreSalamander/veritas, 2026-07-28
 $ curl -s -X POST localhost:8099/api/memory/vault/sync
 {"vault_path": "...", "files_written": 221}
 $ curl -s localhost:8099/api/memory/vault/status
-{"vault_path": "...", "exists": true, "file_count": 50}   # BUG: 221 != 50, filename collisions
+{"vault_path": "...", "exists": true, "file_count": 50}
+# BUG: 221 != 50, filename collisions
 # fixed by keying vault filenames on the record's id, not its title; re-verified:
 {"vault_path": "...", "files_written": 221}
 {"vault_path": "...", "exists": true, "file_count": 221}  # fixed: 221 == 221</pre>
@@ -801,53 +1266,223 @@ one-engine              60f6f00 2026-08-08 &rarr; 019040e 2026-08-08    24 commi
 05-genesis-replit       57eaffe 2026-08-15 &rarr; 14a88ea 2026-08-16     7 commits
 genesis-os              f348072 2026-08-14 &rarr; 3af5c2c 2026-08-16    13 commits
 $ git -C ~/commitgen log -1
-fatal: your current branch 'main' does not have any commits yet     # Tutela P0, as stated in &sect;15</pre>
+fatal: your current branch 'main' does not have any commits yet
+# Tutela P0, as stated in &sect;15</pre>
   </div>
 
   <div class="appendix-item">
     <h4>A.11 &middot; Checkpoint XV &mdash; the league's load-bearing commits</h4>
     <pre>$ git -C ~/apl log --reverse --format="%h %ad %s" --date=short
-f5a9bb0 2026-08-31 Initial commit: Agent Poker League (Hand Zero + broadcast features)
-58148dd 2026-09-03 THE LAUNCHPAD: everything APL on one page, with launch buttons
-c84f8b0 2026-09-04 THE CLIP RENDERER: a logged hand in, a post-ready vertical mp4 out
-b13ae3e 2026-09-05 THE SOLVED BOOK: a real solver behind the book, honestly labeled
-60b2604 2026-09-05 THE HONEST CAST: fallback tagging, Vera as the solved brain, gemma4 seats
+f5a9bb0 2026-08-31 Initial commit: Agent Poker League (&hellip;)
+58148dd 2026-09-03 THE LAUNCHPAD: everything APL on one page (&hellip;)
+c84f8b0 2026-09-04 THE CLIP RENDERER: a logged hand in, (&hellip;) vertical mp4 out
+b13ae3e 2026-09-05 THE SOLVED BOOK: a real solver behind the book (&hellip;)
+60b2604 2026-09-05 THE HONEST CAST: fallback tagging, Vera as the solved (&hellip;)
 318f6e5 2026-09-06 THE PUBLIC SITE + APL BENCH + the cast's next fixes
-e45f598 2026-09-06 THE LOCKER ROOM: patch notes between sit-n-gos, by the players
-f1df427 2026-09-06 THE SCHOOL: notebooks, the drill, the exam on air, and recall at the table
-2445ca8 2026-09-06 Gate the locker room: --gate-file / --gate-pending judge stored proposals with the real brains
-2204da2 2026-09-06 patchnotes: APPROVE &mdash; apply an accepted note as a persona override from the launchpad
-c4f7ff8 2026-09-07 show-end: publish in three checked steps; a failure is reported, not hidden behind grep
-4b2a4ca 2026-09-09 SHOW: dark to live in one press &mdash; preflight, tune, YouTube broadcast, OBS, director, engine
+e45f598 2026-09-06 THE LOCKER ROOM: patch notes between sit-n-gos (&hellip;)
+f1df427 2026-09-06 THE SCHOOL: notebooks, the drill, the exam on air, and (&hellip;)
+2445ca8 2026-09-06 Gate the locker room: --gate-file / --gate-pending judge (&hellip;)
+2204da2 2026-09-06 patchnotes: APPROVE &mdash; apply an accepted note as a persona (&hellip;)
+c4f7ff8 2026-09-07 show-end: publish in three checked steps; a failure is (&hellip;)
+4b2a4ca 2026-09-09 SHOW: dark to live in one press &mdash; preflight, tune (&hellip;)
 4f85c8a 2026-09-12 THE DUAL RELAY: one OBS stream to YouTube and Twitch
 $ git -C ~/apl rev-list --count HEAD
-99</pre>
+99        # as read on 2026-09-12, at 470d6c8
+
+# since the previous revision (read live 2026-09-27, 18:36 CT), curated:
+$ git -C ~/apl log --reverse --format="%h %ad %s" --date=short 470d6c8..main
+1d8ff9b 2026-09-13 VERA POV, the table cut, and THE STUDIO: post-production (&hellip;)
+28634f8 2026-09-13 THE BOOTH around every hand; (&hellip;) 30 min minimum (&hellip;)
+aa8973d 2026-09-14 Each mind has its own hand matrices (&hellip;)
+b1888f0 2026-09-14 THE EXPOSED BOOK: The Machine's hand matrices, every cell (&hellip;)
+3eeda2f 2026-09-15 THE CHALLENGER SEAT: an agent you build as hand matrices
+83e5ff2 2026-09-15 THE SHOW is two buttons; every episode gets a 16:9 master
+f05fb0b 2026-09-19 The main event, part one: the tournament director and (&hellip;)
+10b2e35 2026-09-19 The main event, part two: the field and the headless room
+fdc8c14 2026-09-19 The minds were not thinking: load the models first, and (&hellip;)
+348773a 2026-09-19 main event: the series planner &mdash; Day One, The Play-Down (&hellip;)
+170ccc1 2026-09-19 main event export: the book grades every aired hand (&hellip;)
+e953033 2026-09-19 THE TOURNAMENT RAIL: a main event, watchable while it plays
+5659b31 2026-09-19 LIVE ON TWITCH, UPLOAD TO YOUTUBE: a one-leg broadcast (&hellip;)
+b0a8430 2026-09-19 TOURNAMENT OF CHAMPIONS: six events, six seats, one (&hellip;)
+7de88c7 2026-09-19 THE HOUSE RULE: live goes to Twitch, (&hellip;) go to YouTube
+8b305b1 2026-09-19 obs-tune measured nothing on a slow line; the wrap stops (&hellip;)
+157c63d 2026-09-20 START caps the model servers' prompt cache (&hellip;)
+1707a42 2026-09-20 studio: never reuse a server found on its port; (&hellip;)
+17ef321 2026-09-20 A jam puts in what can be called
+3f8c0d8 2026-09-20 The House: architecture, gameplan, and the bank
+cafdd14 2026-09-20 Chart minds value their chips: (&hellip;) read through the price
+93b98f5 2026-09-20 The House, Phase 3: the pros decide (&hellip;) their own money
+a41d710 2026-09-20 The House, Phase 4: the pit -- games with a right answer
+22b0c53 2026-09-20 One way to write in the House's book; (&hellip;) live on the site
+2c369c2 2026-09-20 The final table, as a show: played sealed, aired hand by hand
+60c5ed8 2026-09-21 The new look: the felt is the front door, and the whole (&hellip;)
+cdcaa51 2026-09-21 The remote: the launchpad's big buttons, sized for a thumb
+3fa20cf 2026-09-23 The Kelly wheel has a table limit
+b9ed7ad 2026-09-23 The Auntie Rose rule
+843e788 2026-09-24 The launchpad has two faces: SHOW DAY and the workshop
+41750be 2026-09-24 credentials: what the record proves about each pro (&hellip;)
+629f028 2026-09-24 cast: Petey moves to gemma4; credentials split by (&hellip;)
+c9e37dd 2026-09-24 the programme: live at showtime, reruns (&hellip;) the spot bank
+8a5e2bc 2026-09-25 the engine (M1): one poker engine, layered on the solved (&hellip;)
+b3c7e66 2026-09-25 the engine (M2, M3): Vera on the engine, the ghost grader (&hellip;)
+81ac1cc 2026-09-25 The Engine M4&ndash;M6: the kit, challenger residency, (&hellip;)
+19e4321 2026-09-25 The engine's door: hash at the Workers PBKDF2 cap
+639d103 2026-09-25 The station (M2): a dated schedule in home time (&hellip;)
+d9b81e4 2026-09-25 The station (M4, M5): blurbs, the ident, tonight's title, (&hellip;)
+fdac23c 2026-09-26 The stage (step one): a real-time 3D hall (&hellip;)
+64979cd 2026-09-26 The stage in post: (&hellip;) a frame stepper and the renderer
+b42b9a8 2026-09-26 The Sponsored Seat: onboarding, usage, seat pages, report (&hellip;)
+c25b19e 2026-09-27 The stage: the whole shot book, the deal, voiced renders, (&hellip;)
+94a205c 2026-09-27 Episodes render in 3D: the stage pass after the show
+54762a2 2026-09-27 stage: pace &mdash; idle time on the log is not tape
+72cbaa5 2026-09-27 render-stage: the table holds for the words, (&hellip;) pace 600
+$ git -C ~/apl rev-list --count main
+236
+$ git -C ~/apl rev-list --count 470d6c8..main
+137
+$ git -C ~/apl diff --shortstat 470d6c8 main
+ 369 files changed, 37009 insertions(+), 3234 deletions(-)
+
+# in progress, not merged: the non-merge commits on stage-toc, stage-emblem
+#   and stage-spot (nine commits with the two merges)
+09975be 2026-09-27 ToC on the stage: seats by number, (&hellip;) the season runner
+1e67456 2026-09-27 stage: THE TOKENS &mdash; every agent's emblem as a coin (&hellip;)
+ec44c36 2026-09-27 ToC on the stage, review round: the contested pot (&hellip;)
+2685bdb 2026-09-27 The ToC commercial on the stage: (&hellip;) honest by the ledger
+cf799b5 2026-09-27 WIP (unreviewed): finals prep &mdash; (&hellip;)
+b8f3f16 2026-09-27 The ToC commercial in the cold open's voice: one narrator (&hellip;)
+a4d839d 2026-09-27 ToC commercial: the players stay in frame at the climax (&hellip;)</pre>
   </div>
 
   <div class="appendix-item">
-    <h4>A.12 &middot; Checkpoint XV &mdash; the test run and the benchmark (run live for this revision)</h4>
-    <pre>$ pnpm -r test          # ~/apl, 2026-09-12, sixteen packages
+    <h4>A.12 &middot; Checkpoint XV &mdash; the test run and the benchmark (run live for this revision, 2026-09-27)</h4>
+    <pre>$ pnpm -r --no-bail test   # ~/apl working tree at main (72cbaa5), live
+# 2026-09-27, started 20:06:30 CT, after that night's show
+TOTAL passed: 1,573  failed: 0  test files: 115  packages with tests: 25
+wall time: 61.6 s (1:01.57; 115.8 s user)   exit 0
+  apps/server 254 &middot; brains 207 &middot; engine 151 &middot; patchnotes 145 &middot; corpus 128
+  apps/web 111 &middot; replay 93 &middot; archivist 86 &middot; matrices 70 &middot; tournament 53
+  opponent 47 &middot; casino 36 &middot; booth 35 &middot; protocol 30 &middot; solver 27 &middot; datahub 18
+  engine-matrix 16 &middot; station 15 &middot; housegames 14 &middot; programme 9 &middot; studydesk 9
+  bench 6 &middot; clock 6 &middot; school 4 &middot; obsidian 3
+# the 1,573 include packages/obsidian's 3 tests: the package is in the
+#   working tree, uncommitted, and pnpm -r picks it up, as it did in both
+#   runs below
+
+# recorded runs between the two revisions (the build session's task outputs):
+#   2026-09-23 21:42 CT   1,501 passed &middot; 21 workspaces &middot; 0 failed
+#   2026-09-26 23:51 CT   1,573 passed &middot; 25 workspaces &middot; 0 failed
+#   both include packages/obsidian's 3 tests, uncommitted
+#   no test file changed between the second run's HEAD (19e7715) and 72cbaa5
+# new packages since 2026-09-12: matrices &middot; tournament &middot; casino &middot;
+#   housegames &middot; programme &middot; station &middot; clock &middot; engine-matrix
+
+# at the previous revision:
+$ pnpm -r test          # ~/apl, 2026-09-12, sixteen packages
 TOTAL passed: 1291  failed: 0
-  apps/server 238 &middot; apps/web 82 &middot; brains 195 &middot; engine 151 &middot; patchnotes 145 &middot; corpus 128 &middot;
-  replay 93 &middot; archivist 86 &middot; opponent 47 &middot; booth 35 &middot; protocol 30 &middot; solver 24 &middot; datahub 18 &middot;
-  studydesk 9 &middot; bench 6 &middot; school 4
+  apps/server 238 &middot; apps/web 82 &middot; brains 195 &middot; engine 151 &middot; patchnotes 145
+  corpus 128 &middot; replay 93 &middot; archivist 86 &middot; opponent 47 &middot; booth 35 &middot; protocol 30
+  solver 24 &middot; datahub 18 &middot; studydesk 9 &middot; bench 6 &middot; school 4
 
-$ cat packages/bench/results/leaderboard.md        # 550-spot pack, EV against the pre-solve
-| contestant   | EV lost (bb/decision) | graded | preflop agree | argmax | fallback |
-| solved-book  | 0.046                 | 300    | 98.5%         | 92.6%  | 0%       |
-| heuristic    | 2.092                 | 300    | 85.5%         | 67.8%  | 0%       |</pre>
+$ cat packages/bench/results/leaderboard.md
+# the 550-spot pack, EV against the pre-solve (unchanged since 2026-09-06);
+#   rows 1-2, selected columns, EV lost in big blinds per decision
+| contestant  | EV lost bb/dec | graded | preflop agree | argmax | fallback |
+| solved-book | 0.046          | 300    | 98.5%         | 92.6%  | 0%       |
+| heuristic   | 2.092          | 300    | 85.5%         | 67.8%  | 0%       |
+
+$ cat apps/server/data/challenger-grades/sample-v1-score.json
+# The Ledger, the worked challenger, graded 2026-09-15 under v1's rules:
+#   on the 120 spots it answered, not the whole pack (the all-550 gate is v2's)
+spots 550 &middot; answered 120 &middot; preflopGraded 48 &middot; evGraded 72 &middot; legal 100%
+preflop agree 85.4% &middot; argmax 65.8% &middot; EV lost 4.076 bb/decision over 72
+worst: ri-028 (river, call) 65.73 bb &middot; tu-057 (turn, raise to 990) 63.38 bb
+
+$ cat apps/site/data/engine-grades.json
+# the engine's layers, graded nightly; as of 2026-09-27 00:30 CT
+receipts 125 &middot; declined 38 &middot; differed 21
+switch-off: upper bound under -30 bb/100 over 300+ hands
+base n 11 &middot; tuning n 2 &middot; pressure n 12 &middot; exploit n 5 &middot; switched tonight: none
+# no layer is within reach of the 300 hands it needs before the switch may act</pre>
   </div>
 
   <div class="appendix-item">
-    <h4>A.13 &middot; Checkpoint XV &mdash; the caught bug, as the instrument recorded it</h4>
-    <pre>$ tools/cast-report.mts &rarr; apps/server/data/cast-reports/&lt;session&gt;.json   (character "vera")
+    <h4>A.13 &middot; Checkpoint XV &mdash; the first caught bug, as the instrument recorded it</h4>
+    <pre>$ tools/cast-report.mts &rarr; apps/server/data/cast-reports/&lt;session&gt;.json
+    (character "vera")
 session-1788496225630   model claude-opus-5   decisions 799   fallbackPct 100
 session-1788568929694   model claude-opus-5   decisions 293   fallbackPct 100
 session-1788587439866   model claude-opus-5   decisions 743   fallbackPct 100
 # trace on every decision: "Could not resolve authentication method"
-# root cause: .env set ANTHROPIC_API_KEY without `export`; the brain fell back per decision and never threw
-# fix (60b2604): configuration errors throw through the decision path; every fallback thought is
-#   tagged in the protocol and stamped "on instinct" on screen; startup warns loudly</pre>
+# root cause: .env set ANTHROPIC_API_KEY without `export`; the brain fell back
+#   per decision and never threw
+# fix (60b2604): configuration errors throw through the decision path; every
+#   fallback thought is tagged in the protocol and stamped "on instinct" on
+#   screen; startup warns loudly</pre>
+  </div>
+
+  <div class="appendix-item">
+    <h4>A.14 &middot; Checkpoint XV &mdash; the second caught failure, as the instruments recorded it (read live, 2026-09-27)</h4>
+    <pre>$ # brain traces, apps/server/data/traces-*.jsonl, kind "ollama" (the four
+$ # language-model seats), bucketed by calendar day in Central time on each
+$ # trace's ts, counting fallback.used
+day     decisions  fell back   rate
+09-12       1,654         69    4.2%
+09-13       2,338        192    8.2%
+09-14       1,396        107    7.7%
+09-15       2,186        223   10.2%
+09-16       1,803      1,031   57.2%
+09-17       1,756      1,510   86.0%
+09-18       2,054      1,923   93.6%
+#   09-18 by seat: Professor 97.5 &middot; Rose 96.3 &middot; Moose 92.6 &middot; Petey 89.2
+09-19         956        203   21.2%    # fdc8c14 lands at 04:43
+# reason on 4,657 of the 4,667 fallbacks of 09-16..09-19:
+#   "This operation was aborted" (the seat's clock ran out)
+
+$ # the session log's own flag, data/session-1789457707955.jsonl (one
+$ # continuous show, 09-15 to 09-19): language-model-seat thoughts with
+$ # fallback: true, per sit-n-go (end time CT)
+SNG 77  09-16 08:12    31/298   10.4%
+SNG 78  09-16 15:00   273/392   69.6%
+SNG 79  09-16 20:54   462/463   99.8%
+SNG 80  09-17 01:52   397/397  100.0%
+SNG 81  09-17 07:32   269/373   72.1%    # episode public
+SNG 82  09-17 11:57   308/351   87.7%    # episode public
+SNG 83  09-17 14:39   127/147   86.4%    # episode public
+SNG 84  09-17 21:14   411/490   83.9%
+SNG 85  09-18 02:01   368/384   95.8%
+SNG 86  09-18 07:27   374/474   78.9%
+SNG 87  09-18 10:55   314/314  100.0%    # public (flat); 3D pilot, Figs 1, 4
+SNG 88  09-18 15:48   421/421  100.0%
+SNG 89  09-18 20:41   434/434  100.0%
+SNG 90  09-19 00:26   258/295   87.5%    # episode public
+
+# found 2026-09-19 ~03:00 CT, by accident, while wiring the real minds into
+#   the tournament tool (8d63d0c); the build session to the user:
+#   "you're on air right now" (transcript, 08:00Z)
+# causes (fdc8c14, 04:43):
+#   - 36 GB in the memory compressor after ten days up; the two models
+#     evicted each other on every decision
+#   - no warm-up: llama3.2 cold-loads in ~15 s against a 10 s clock, and the
+#     model server abandons a load when its caller hangs up
+#   - Node raced ::1 against 127.0.0.1 while the solver held the event loop
+#   smoke run after: 0 of 29 language-model decisions fell back
+# not the whole fix: the 500-entry live-minds room that afternoon
+#   (main-20260919-1353) fell back on 126 of 415 (30.4%)
+# root cause (157c63d, 09-20 01:23): each llama-server's host-RAM prompt
+#   cache, 8 GB by default; 19 GB of model servers and 18.8 GB of swap on a
+#   24 GB Mac -&gt; capped at 512 MB by START and checked on every running
+#   server; applied by hand: 1.7 GB of model servers, 2.4 GB of swap
+# after: between the two fixes 99/672 (14.7%);
+#   the table since 157c63d 37/655 (5.6%)
+# the twenty counted tournament events: 62/7,415 (0.84%), a total that
+#   includes three Season 1 events played on 09-19, before 157c63d
+#   (the Season 3 final, read after it aired: no language-model seat, +0/0)
+$ grep -c -E "fallback\.used|fallbackPct|fallbackRate" tools/show-start.mts
+0
+# START reads no fallback rate; the nightly credentials and usage passes
+#   report it after the fact. A flag, and a report, but not a gate.</pre>
   </div>
 
   <p class="footnote">Compiled from: project_myaistro, project_myaistory, project_housealwayswins,
@@ -855,7 +1490,13 @@ session-1788587439866   model claude-opus-5   decisions 743   fallbackPct 100
   project_opportunity_agency, project_scaffold_recursion, project_trust_tiers,
   project_datahub_hackathon, project_moresalamander, project_entropy_ai, and &mdash; for this revision &mdash;
   genesis-os-hackathon, local-finetune-workflows, agent-poker-league, apl-dual-relay &mdash; session memory plus
-  live repository state, MoreSalamander StudioLabs, 2026-07-28 and 2026-09-12.</p>
+  live repository state, MoreSalamander StudioLabs, 2026-07-28 and 2026-09-12. For the 2026-09-27 revision the
+  APL memory notes (agent-poker-league-vera, apl-llm-fallback-incident, apl-main-event-mtt, apl-the-house-casino,
+  apl-engine-three-doors, apl-challengers-v2, apl-station-and-clock, apl-sponsored-seat, apl-stage-3d,
+  apl-handoff-sep-27-2026 and others) were used as leads only. Every number in &sect;16 was read from the
+  league's git history, <code>apps/server/data</code>, <code>apps/site/data</code>, <code>docs/</code>, or the
+  session transcripts. The four figures are frames from the league's own footage and a screenshot of its
+  public site, copied into <code>docs/fig/</code>.</p>
 
 </div>
 </body>

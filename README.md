@@ -5,7 +5,7 @@
 This is the companion repo for [*The deterministic scaffold: a case study in
 compounding architecture*](paper.pdf) — a paper tracing one architectural
 invariant (an LLM proposes; a deterministic gate decides) across fifteen
-checkpoints of a real, shipped body of work (January to September 2026; revised 2026-09-12).
+checkpoints of a real, shipped body of work (January to September 2026; revised 2026-09-27).
 
 **This repo is not the production code.** It contains small, dependency-free
 reproductions of two specific claims from the paper, built so a skeptical
@@ -29,7 +29,7 @@ reader can verify them by running tests, not by trusting prose.
   revision had none: it was authored as HTML inside a session's private temp
   scratchpad, printed to PDF, and the scratchpad was gone by the next
   session — a paper arguing for durable, checkable verification had, for one
-  revision, none itself. Named in the paper's own Limitations section (§14)
+  revision, none itself. Named in the paper's own Limitations section (§19)
   rather than quietly fixed without comment. To re-render after an edit:
   `google-chrome --headless --disable-gpu --print-to-pdf=paper.pdf --no-pdf-header-footer file://$(pwd)/paper_source.html`
   (then copy to `docs/paper.pdf`).
